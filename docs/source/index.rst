@@ -1,12 +1,13 @@
-Welcome to Lumache's documentation!
+Welcome to ViciBox's documentation!
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+**ViciBox** is the official installation image for the `ViciDial Call Center Suite <http://www.vicidial.org/vicidial.php>`.
 
-Check out the :doc:`usage` section for further information, including
+It is based off the OpenSuSE Leap distribution with all the necessary pre-requisites
+already installed. The ViciBox image can be downloaded directly from the `ViciBox Website <http://www.vicibox.com/server/index.html>`.
+
+
+Check out the :doc:`introduction` section for further information, including
 how to :ref:`installation` the project.
 
 .. note::
