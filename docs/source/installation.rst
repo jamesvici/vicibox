@@ -1,7 +1,12 @@
+============
 Installation
 ============
 
 .. _installation:
+
+Include information on installing ViciBox and basic installation considerations.
+
+----------------
 
 Media
 -----

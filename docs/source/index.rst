@@ -1,31 +1,29 @@
-.. ViciBox documentation master file, created by
-   sphinx-quickstart on Thu Apr  6 02:44:12 2023.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. ViciBox documentation master file
 
-Welcome to ViciBox!
-===================
+.. image:: ./images/Vicibox_pixel_green_whitebg_20180921.png
+   :align: center
 
-**ViciBox** is the official installation image for the `ViciDial Call Center Suite <http://www.vicidial.org/vicidial.php>`_.
+-----------------
 
-Official support is available through the `ViciDial Group <http://www.vicidial.com>`_.
+===================================
+Welcome to ViciBox's documentation!
+===================================
 
-The ViciBox image can be downloaded directly from the `ViciBox Server <http://www.vicibox.com/server/index.html>`_ website.
+**ViciBox** is the official installation image for the `ViciDial® Call Center Suite <http://www.vicidial.org/vicidial.php>`__.
 
-ViciBox is based upon the `OpenSuSE Leap <https://www.opensuse.org/#Leap>`_ distribution and includes all the needed pre-requisites and tools to maintain a ViciDial installation. There is an installer available to help setup ViciDial for both standalone and cluster installations.
+Official support is available through the `ViciDial Group <http://www.vicidial.com>`__.
+
+The ViciBox image can be downloaded directly from the `ViciBox Server <http://www.vicibox.com/server/index.html>`__ website.
+
+ViciBox is based upon the `OpenSuSE Leap <https://www.opensuse.org/#Leap>`__ distribution and includes all the needed pre-requisites and tools to maintain a ViciDial installation. There is an installer available to help setup ViciDial for both standalone and cluster installations.
+
+-----------------
+Table of Contents
+-----------------
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
-   
+      
    introduction
    installation
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   
