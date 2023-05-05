@@ -8,7 +8,6 @@
 ===================================
 Welcome to ViciBox's documentation!
 ===================================
-
 **ViciBox** is the official installation image for the `ViciDial® Call Center Suite <http://www.vicidial.org/vicidial.php>`__.
 
 Official support is available through the `ViciDial Group <http://www.vicidial.com>`__.

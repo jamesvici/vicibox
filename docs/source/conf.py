@@ -9,7 +9,7 @@ project = u'ViciBox Manual'
 copyright = u'2005-%d, ViciDial Group' % datetime.datetime.now().year
 author = u'James Pearson'
 release = u'11.0.0 Beta'
-version = u'0.11.0b'
+version = u'11.0.0 Beta'
 
 # -- General configuration
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
@@ -33,10 +33,8 @@ templates_path = ['_templates']
 # -- Options for HTML output
 html_theme = 'sphinx_rtd_theme'
 html_baseurl = 'https://docs.vicibox.com/'
-html_theme_options = {
-    'style_nav_header_background': '#00AA0D',
-}
-html_logo = 'images/Vicibox_pixel_green_whitebg_20180921.png'
+html_theme_options = { 'style_nav_header_background': '#00AA0D', }
+#html_logo = 'images/Vicibox_pixel_green_whitebg_20180921.png'
 html_favicon = 'images/favicon.ico'
 html_show_sourcelink = False
 htmlhelp_basename = 'viciboxdoc'
