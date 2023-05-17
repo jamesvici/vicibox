@@ -12,7 +12,7 @@ Welcome to ViciBox's documentation!
 
 Official support is available through the `ViciDial Group <http://www.vicidial.com>`__.
 
-The ViciBox image can be downloaded directly from the `ViciBox Server <http://www.vicibox.com/server/index.html>`__ website.
+The ViciBox installation images can be downloaded directly from the `ViciBox Server <http://www.vicibox.com/server/index.html>`__ website.
 
 ViciBox is based upon the `OpenSuSE Leap <https://www.opensuse.org/#Leap>`__ distribution and includes all the needed pre-requisites and tools to maintain a ViciDial installation. There is an installer available to help setup ViciDial for both standalone and cluster installations.
 
@@ -25,4 +25,5 @@ Table of Contents
       
    introduction
    installation
+   networking
    

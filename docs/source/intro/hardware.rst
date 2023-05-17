@@ -9,6 +9,6 @@ Hardware
    :maxdepth: 2
    :titlesonly:
 
-   hardware-spec
    dimensioning
+   hardware-spec
    example-install

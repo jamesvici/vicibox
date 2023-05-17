@@ -1,8 +1,8 @@
-====================
-Initial Installation
-====================
+============
+Installation
+============
 
-Initial Installation of ViciBox
+Installation of ViciBox
 
 ----------------
 
@@ -10,5 +10,8 @@ Initial Installation of ViciBox
    :maxdepth: 2
    :titlesonly:
 
-   install/media
+   install/media/media
+   install/phase1/phase1
+   install/phase1_5/phase1_5
+   install/phase2/phase2
 
