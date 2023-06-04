@@ -1,12 +1,12 @@
-============
+************
 Introduction
-============
+************
 
 .. toctree::
    :maxdepth: 2
    :titlesonly:
 
-   intro/foreward
-   intro/hardware
-   intro/network
+   introduction/foreward
+   introduction/hardware
+   introduction/network
 

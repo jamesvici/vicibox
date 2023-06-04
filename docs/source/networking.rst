@@ -10,7 +10,7 @@ Network related configuration
    :maxdepth: 2
    :titlesonly:
 
-   network/types
-   network/config
-   network/firewall
+   networking/types
+   networking/config
+   networking/firewall
    

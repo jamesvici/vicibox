@@ -1,17 +1,14 @@
-============
 Installation
-============
+############
 
-Installation of ViciBox
-
-----------------
+   ViciBox is installed in two phases. The first phase installs the base ViciBox operating system onto the server. The second phase involves setting up ViciDial itself. There is an interim phase, referred to as Phase 1.5, where some ancillary processes happen.
 
 .. toctree::
    :maxdepth: 2
    :titlesonly:
 
-   install/media/media
-   install/phase1/phase1
-   install/phase1_5/phase1_5
-   install/phase2/phase2
+   installation/media
+   installation/phase1
+   installation/phase1_5
+   installation/phase2
 

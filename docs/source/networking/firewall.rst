@@ -1,11 +1,10 @@
-===========
-VB-Firewall
-===========
+Firewall
+********
 
-Goes over the ViciBox Firewall and how to manage it
+    Goes over the ViciBox Firewall and how to manage it
 
 Overview
---------
+========
 Overview of how the firewall works
 
 Default
@@ -28,6 +27,9 @@ Dynamiclist
 -----------
 What Dynamic List mode is
 
-How to
-------
-How to examples for common config options
+.. toctree::
+   :maxdepth: 2
+   :titlesonly:
+
+   firewall/howto
+   

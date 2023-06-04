@@ -5,11 +5,11 @@ import datetime
 import sphinx_rtd_theme
 
 # -- Project information
-project = u'ViciBox Manual'
+project = u'ViciBox'
 copyright = u'2005-%d, ViciDial Group' % datetime.datetime.now().year
 author = u'James Pearson'
-release = u'11.0.0 Beta'
-version = u'11.0.0 Beta'
+release = u'11.0 Beta'
+version = u'11.0 Beta'
 
 # -- General configuration
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
