@@ -1,14 +1,13 @@
 Phase 1.5
 *********
-   Instructions for initial login and configuration go here
-
-   Instructions for configuring the network go here
-
-   Instructions for update the system packages go here
+   Before ViciDial is installed and setup on the servers it is necessary to configure the network. Since this is a convenient stopping point it is also a good time to do other things like install updates or change the root password.
 
 
 .. toctree::
    :maxdepth: 2
    :titlesonly:
 
-
+   phase1_5/static-ip
+   phase1_5/new-updates
+   phase1_5/change-timezone
+   phase1_5/change-rootpw
