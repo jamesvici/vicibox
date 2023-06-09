@@ -14,10 +14,10 @@ Change root password
 
 passwd
 ------
-   #. If not already, login as the 'root' user to get to the command prompt.
-   #. Type ``passwd`` to change the root password.
-   #. At the 'New password:' prompt type in your new root password.
-   #. At the 'Retype new password:' prompt type in yoru new root password again to verify it.
+   #. If not already, login as the 'root' user to get to the **#** command prompt.
+   #. Type ``passwd`` and press ``ENTER`` to change the root password.
+   #. At the **New password:** prompt type in your new root password and press ``ENTER``.
+   #. At the **Retype new password:** prompt type in the new root password again and press ``ENTER``.
 
 
 Screenshots

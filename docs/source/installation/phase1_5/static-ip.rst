@@ -1,19 +1,28 @@
+.. _phase1_5-static-ip:
+
 Configure Static IP
 ===================
-   While not necessary it is highly recommend to use a static IP whenever possible. The IP address, net mask, and default gateway will be unique to your network and is beyond the scope of this document. While the DNS servers used in this example can be used safely it might be better to use the local router or ISP DNS servers instead. This example will be using the following:
+   While not necessary it is highly recommend to use a static IP. Once ViciDial is installed it's configuration will be tied to the current LAN and WAN IP. If those IPs change then ViciDial's configuration must also change to match. While not usually a problem with a LAN, a static IP is very important for the WAN. This static WAN IP is what will allow ViciDial to work reliably behind firewalls and with SIP carriers. 
    
-   * Host Name : vicibox-docs
-   * IP Address : 192.168.1.4
-   * Subnet Netmask : 255.255.255.0 (/24)
-   * Default Gateway : 192.168.1.1
-   * Name Server 1 : 208.67.222.222
-   * Name Server 2 : 208.67.220.220
+   This might not be a problem if the ISP doesn't rotate the IPs that often. My residential cable modem ISP seems to rotate the IP every 30 days. Still, the cost to get a static IP is usually worth what a few hours of unexpected downtime in the middle of the day will be.
+   
+   The IP address, net mask, and default gateway will be unique to your network and is beyond the scope of this document. While the DNS servers listed in the below example can be used safely it might be better to use the local router or ISP for DNS instead.
+
+   If there is a LAN and WAN network connected to the server then the WAN's default gateway should be used. There should only ever be one default gateway on the server no matter how many networks it is connected to.
+   
+   This example will be using the following:
+      * Host Name : vicibox-docs
+      * IP Address : 192.168.1.4
+      * Subnet Netmask : 255.255.255.0 (/24)
+      * Default Gateway : 192.168.1.1
+      * Name Server 1 : 208.67.222.222
+      * Name Server 2 : 208.67.220.220
       
-   .. note:: If there is a LAN and WAN network connected to the server then the WAN default gateway should be used. There should only ever be one default gateway on the server no matter how many networks it is connected to.
+   .. note:: While the server supports IPv6 ViciDial itself has not been extensively tested with it. Therefore the documentation will assume IPv4 only for all networking.
 
 yast lan
 --------
-   #. If not already, login as the 'root' user to get to the command prompt.
+   #. If not already, login as the 'root' user to get to the **#** command prompt.
    #. Type ``yast lan`` to start the network configuration.
    #. Press the ``TAB`` key until the network interface is highlighted.
    #. If there are multiple network interfaces, use the up and down arrow key to highlight the correct network interface
@@ -39,7 +48,9 @@ yast lan
    #. Press ``ALT``-``G`` or ``TAB`` to move to the 'Gateway' field
    #. Type in the Default Gateway to use for this server, I.E. ``192.168.1.1``
    #. Press ``ALT``-``O`` or ``TAB`` to select the 'OK' button. You should see the newly added gateway listed as default
-   #. Press ``ALT``-``O`` or ``TAB`` to select the 'OK' button to accept the network configuration and make changes. When it's finished you should be back at the command prompt. The basic network configuration is complete.
+   #. Press ``ALT``-``O`` or ``TAB`` to select the 'OK' button to accept the network configuration and make changes.
+   #. At this point the network should be connected. Verify by pinging some hosts, I.E. ``ping google.com``.
+   #. Press ``CTRL``-``C`` to cancel the ping.
 
 Screenshots
 ^^^^^^^^^^^
@@ -81,4 +92,9 @@ Screenshots
    Save changes
       .. image:: static-ip-8.png
          :alt: Save changes and apply network configuration
+         :width: 665
+
+   Verify connectivity
+      .. image:: static-ip-9.png
+         :alt: Verify network connectivity by pinging other hosts
          :width: 665
