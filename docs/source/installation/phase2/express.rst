@@ -1,3 +1,5 @@
+.. _`express`:
+
 Express Box
 ===========
    With ``vicibox-express`` all three ViciDial roles will be installed onto a single server. This is best suited for contact centers with less then 20 agents or as a proof of concept. It is the recommend starting point for first time users of ViciBox as it's the easiest option.
@@ -6,17 +8,18 @@ Express Box
 
 vicibox-express
 ---------------
-   #. If not already, login as the 'root' user to get to the **#** command prompt.
+   #. If not already, login as the ``root`` user to get to the **#** command prompt.
    #. Type ``vicibox-express`` and press ``ENTER``.
    #. Type ``Y`` and press ``ENTER`` to start the installation.
    #. Once you are back at the **#** command prompt, the installation is complete. Type ``reboot`` and press ``ENTER``.
    #. Once the reboot is complete, log back in as root to get to the **#** command prompt.
    #. Type ``screen -ls`` and press ``ENTER``. While it might take upwards of 5 minutes, eventually there should be **11 Sockets in /run/screens/S-root** shown before returning to the **#** command prompt
-   #. Type ``asterisk -r`` and press ``ENTER`` to connect to the Asterisk console. Here should she be able to see the different processes like **sendcron** logging on and off.
+   #. Type ``asterisk -r`` and press ``ENTER`` to connect to the Asterisk console. There should be different processes like **sendcron** logging on and off.
    #. Type ``quit`` and press ``ENTER`` to exit back to the **#** command prompt.
-   #. Lastly verify that the web interface is up by going to that server's IP in a web brownser. The default user is ``6666`` and the password is ``1234``. This will bring you to the initial setup screen for ViciDial.
+   #. In a web browser, type in the servers IP address, I.E. ``192.168.50.4``, and press ``ENTER``
+   #. Click on **Administration** and login. The default **Username** is ``6666`` with **Password** ``1234``. Upon login you should see the ViciDial Initial Setup screen.
 
-   ViciDial is now successfully installed and running. It's recommended to continue with the initial ViciDial setup and then give the '6666' user all Admin permissions. This will allow all aspect of ViciDial to be configured.
+   ViciDial is now successfully installed and running. It's recommended to continue with the initial ViciDial setup and then give the **6666** user all Admin permissions.
 
 Screenshots
 ^^^^^^^^^^^
@@ -31,16 +34,21 @@ Screenshots
          :width: 665
 
    Verify ViciDial is running
-      .. image:: express-4.png
+      .. image:: express-3.png
          :alt: Verify that ViciDial and Asterisk are running
          :width: 665
 
    Verify web server is up
-      .. image:: express-3.png
+      .. image:: express-4.png
          :alt: Verify that the web server is running
          :width: 665
 
-   Login to configure ViciDial
+   Login to ViciDial
       .. image:: express-5.png
          :alt: Login to ViciDial to continue setting it up
+         :width: 665
+   
+   Continue on to the Initial Setup
+      .. image:: express-6.png
+         :alt: Continue on with the Initial ViciDial configuration
          :width: 665

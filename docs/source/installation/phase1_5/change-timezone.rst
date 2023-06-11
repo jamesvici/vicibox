@@ -4,7 +4,7 @@ Change Timezone
 
 vicibox-timezone
 ----------------
-   #. If not already, login as the 'root' user to get to the **#** command prompt.
+   #. If not already, login as the ``root`` user to get to the **#** command prompt.
    #. Type ``vicibox-timezone`` and press ``ENTER`` to start the timezone configuration.
    #. Using the Up and Down arrow keys, select the appropriate region for the server.
    #. Press the ``TAB`` key to move to the **Time Zone** selection window.
