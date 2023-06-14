@@ -12,8 +12,6 @@ release = u'11.0 Beta'
 version = u'11.0 Beta'
 
 # -- General configuration
-html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-
 extensions = [
     'sphinx.ext.duration',
     'sphinx.ext.doctest',
@@ -24,14 +22,21 @@ extensions = [
 ]
 
 intersphinx_mapping = {
-    'python': ('https://docs.python.org/3/', None),
-    'sphinx': ('https://www.sphinx-doc.org/en/master/', None),
+    "rtd": ("https://docs.readthedocs.io/en/stable/", None),
+    "python": ("https://docs.python.org/3/", None),
+    "sphinx": ("https://www.sphinx-doc.org/en/master/", None),
 }
 intersphinx_disabled_domains = ['std']
 
 templates_path = ['_templates']
 
+# List of patterns, relative to source directory, that match files and
+# directories to ignore when looking for source files.
+# This pattern also affects html_static_path and html_extra_path.
+exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
+
 # -- Options for HTML output
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 html_theme = 'sphinx_rtd_theme'
 html_baseurl = 'https://docs.vicibox.com/'
 html_theme_options = { 'style_nav_header_background': '#00AA0D', }
