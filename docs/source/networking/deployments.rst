@@ -12,11 +12,5 @@ LAN with NAT/firewall
       * Each telephony server needs a unique 5000 port UDP range
       * If the Firewall has a bad day, everything has a bad day
 
-   .. blockdiag::
-      :align: center
-
-      blockdiag {
-         WAN <-> Firewall <-> LAN;
-      }
    
    
