@@ -8,6 +8,5 @@ Networking
    :titlesonly:
 
    networking/deployments
-   networking/config
    networking/firewall
    

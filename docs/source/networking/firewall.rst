@@ -1,5 +1,5 @@
 Firewall
-********
+########
    The ViciBox Firewall is an integration with firewalld in the underlying OS. It offers multiple modes of operation with some modes integrated directly within ViciDial as well.
 
    ViciBox Firewall modes
