@@ -5,20 +5,20 @@ import datetime
 import sphinx_rtd_theme
 
 # -- Project information
-project = u'ViciBox'
-copyright = u'2005-%d, ViciDial Group' % datetime.datetime.now().year
-author = u'James Pearson'
-release = u'11.0 Beta'
-version = u'11.0 Beta'
+project = "ViciBox"
+copyright = "2005-%d, ViciDial Group" % datetime.datetime.now().year
+author = "James Pearson"
+release = "11.0 Beta"
+version = "11.0 Beta"
 
 # -- General configuration
 extensions = [
-    'sphinx.ext.duration',
-    'sphinx.ext.doctest',
-    'sphinx.ext.autodoc',
-    'sphinx.ext.autosummary',
-    'sphinx.ext.intersphinx',
-    'sphinxcontrib.blockdiag',
+    "sphinx.ext.duration",
+    "sphinx.ext.doctest",
+    "sphinx.ext.autodoc",
+    "sphinx.ext.autosummary",
+    "sphinx.ext.intersphinx",
+    "sphinxcontrib.blockdiag",
 ]
 
 intersphinx_mapping = {
@@ -26,9 +26,9 @@ intersphinx_mapping = {
     "python": ("https://docs.python.org/3/", None),
     "sphinx": ("https://www.sphinx-doc.org/en/master/", None),
 }
-intersphinx_disabled_domains = ['std']
+intersphinx_disabled_domains = ["std"]
 
-templates_path = ['_templates']
+templates_path = ["_templates"]
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
