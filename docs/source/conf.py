@@ -18,7 +18,6 @@ extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.autosummary",
     "sphinx.ext.intersphinx",
-    "sphinxcontrib.blockdiag",
 ]
 
 intersphinx_mapping = {
@@ -50,6 +49,3 @@ epub_show_urls = 'footnote'
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
-
-# Font for Block Diagram
-blockdiag_fontpath = '/Library/Fonts/Arial.ttf'
