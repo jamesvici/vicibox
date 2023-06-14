@@ -1,5 +1,5 @@
 Cluster
-=======
+*******
    ViciDial Setup Order
       * Database server
       * Web server
@@ -13,7 +13,7 @@ Cluster
    While it might sound good to use greek gods, disney characters, or transformers for the hostname of your servers, don't. Being told that Optimus Prime went down but Megatron is handling it now is just confusing. And yes, that is based on a true story of an 11-server cluster. Optimius Prime was the primary database, Megatron was the replicated backup. Bumblebee was the web server and Starscream was their primary telephony server. No numbers either, so the second telephony server was Skywarp I think. Don't be that guy.
 
 Planning
---------
+========
    With ``vicibox-install`` the different roles of ViciDial can be ran on multiple servers. These servers can then connect with each other across the network to scale. By doing this a ViciDial Cluster can scale up to 500 agents.
 
    The examples in this section will be for the three initial servers needed to make a ViciDial Cluster. This is the starting point upon which any size cluster can be built. To add more servers just repeat the install as needed.

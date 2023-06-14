@@ -1,9 +1,9 @@
 Phase 1
-*******
+#######
    The installation of ViciBox is pretty straight forward. There have been some issues reported when installing over previous installations of Linux. The best way to insure a smooth installation is to wipe the drives before hand.
 
 Install ViciBox
-===============
+***************
 
    #. Boot from the install :ref:`media`.
    #. By default the install media will boot from the servers local drive. Select **Install ViciBox** and press ``ENTER`` to start the ViciBox install.
@@ -24,7 +24,7 @@ Install ViciBox
    Congrats, ViciBox has been installed.
 
 Screenshots
------------
+===========
    Select Install ViciBox
       .. image:: ./phase1/boot-installer.png
          :alt: Select ViciBox installer

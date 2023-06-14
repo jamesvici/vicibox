@@ -1,13 +1,13 @@
 .. _`express`:
 
 Express Box
-===========
+***********
    With ``vicibox-express`` all three ViciDial roles will be installed onto a single server. This is best suited for contact centers with less then 20 agents or as a proof of concept. It is the recommend starting point for first time users of ViciBox as it's the easiest option.
     
    Different roles can later be split off and moved to different servers. After all, an express box is just all three roles running on a single server. These roles can be moved to different servers on the network as needs changes.
 
 vicibox-express
----------------
+===============
    #. If not already, login as the ``root`` user to get to the **#** command prompt.
    #. Type ``vicibox-express`` and press ``ENTER``.
    #. Type ``Y`` and press ``ENTER`` to start the installation.
@@ -22,7 +22,7 @@ vicibox-express
    ViciDial is now successfully installed and running. It's recommended to continue with the initial ViciDial setup and then give the **6666** user all Admin permissions.
 
 Screenshots
-^^^^^^^^^^^
+-----------
    Run vicibox-express and install
       .. image:: express-1.png
          :alt: Run vicibox-express to install

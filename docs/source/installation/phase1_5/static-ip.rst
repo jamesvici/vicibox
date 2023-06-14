@@ -1,7 +1,7 @@
 .. _phase1_5-static-ip:
 
 Configure Static IP
-===================
+*******************
    While not necessary it is highly recommend to use a static IP. Once ViciDial is installed it's configuration will be tied to the current LAN and WAN IP. If those IPs change then ViciDial's configuration must also change to match. While not usually a problem with a LAN, a static IP is very important for the WAN. This static WAN IP is what will allow ViciDial to work reliably behind firewalls and with SIP carriers. 
    
    This might not be a problem if the ISP doesn't rotate the IPs that often. My residential cable modem ISP seems to rotate the IP every 30 days. Still, the cost to get a static IP is usually worth what a few hours of unexpected downtime in the middle of the day will be.
@@ -38,7 +38,7 @@ Configure Static IP
    .. note:: While the server supports IPv6 ViciDial itself has not been extensively tested with it. Therefore the documentation will assume IPv4 only for all networking.
 
 yast lan
---------
+========
    #. If not already, login as the ``root`` user to get to the **#** command prompt.
    #. Type ``yast lan`` to start the network configuration.
    #. Press the ``TAB`` key until the network interface is highlighted.
@@ -83,7 +83,7 @@ yast lan
       #. Before continuing with the rest of the setup it is necessary to log out and back in as root for the hostname change to take effect on the command line. In the below screenshots the command prompt goes from **vicibox11\:~ #** to **testBox1\:~ #**
 
 Screenshots
-^^^^^^^^^^^
+-----------
    Run yast lan
       .. image:: static-ip-1.png
          :alt: Login as root user, run 'yast lan'
