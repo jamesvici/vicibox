@@ -17,7 +17,6 @@ extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.autosummary",
     "sphinx.ext.intersphinx",
-    "sphinxcontrib.blockdiag",
 ]
 
 intersphinx_mapping = {
@@ -49,6 +48,3 @@ htmlhelp_basename = "viciboxdoc"
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = "sphinx"
-
-# Blockdiag use OpenSans-Bold font
-blockdiag_fontpath = '_static/OpenSans-Bold.ttf'
