@@ -39,7 +39,7 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 # -- Options for HTML output -------------------------------------------------
 html_theme = "sphinx_rtd_theme"
-#html_static_path = ["_static"]
+html_static_path = ["_static"]
 html_baseurl = "https://docs.vicibox.com/"
 html_theme_options = { 'style_nav_header_background': '#00AA0D', }
 #html_logo = 'images/Vicibox_pixel_green_whitebg_20180921.png'
@@ -49,3 +49,6 @@ htmlhelp_basename = "viciboxdoc"
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = "sphinx"
+
+# Blockdiag use OpenSans-Bold font
+blockdiag_fontpath = '_static/OpenSans-Bold.ttf'
