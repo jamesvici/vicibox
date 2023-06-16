@@ -21,6 +21,7 @@ Firewall
    :maxdepth: 2
    :titlesonly:
 
+   firewall/zones
    firewall/voipbl
    firewall/whitelist
    firewall/howto
