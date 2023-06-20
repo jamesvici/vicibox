@@ -64,5 +64,6 @@ Obscurity
       :caption: Restart apache and firewalld
 
       service apache2 restart
+      firewall-cmd --permanent --zone=public --add-port=<preferred-port>/tcp
       firewall-cmd --reload
    
