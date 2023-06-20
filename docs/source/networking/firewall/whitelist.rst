@@ -26,8 +26,7 @@ Setup
 
    All services under the **Public** zone should be removed except **dhcpv6-client** and **rtp**.
 
-   Any IP address on the White List will be handled through the **External** zone in ``yast firewall``.
-
+   Any IP address on the White List will be handled through the **External** zone in ``yast firewall``. By default all the services needed for ViciDial are already listed in this zone.
 
 Control
 =======
