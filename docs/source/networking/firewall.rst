@@ -23,6 +23,8 @@ Firewall
 
    firewall/zones
    firewall/voipbl
+   firewall/blacklist
    firewall/whitelist
+   firewall/dynamic
    firewall/howto
    

@@ -1,3 +1,3 @@
 How-To's
 ********
-    How to enable various aspects of the ViciBox Firewall
+    How to do weird networking things, to be filled out later.
