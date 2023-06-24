@@ -7,11 +7,13 @@
 ViciBox V.11.0 Documentation
 ############################
 
-   **ViciBox** is the official installation image for the `ViciDial® Call Center Suite <http://www.vicidial.org/vicidial.php>`__.
+   ViciBox is the official installation image for the `ViciDial® Call Center Suite <https://www.vicidial.org/vicidial.php>`__.
 
-   Official support is available through the `ViciDial Group <http://www.vicidial.com>`__.
+   Official support is available through the `ViciDial Group <https://www.vicidial.com>`__.
 
-   ViciBox is based upon the `OpenSuSE Leap <https://www.opensuse.org/#Leap>`__ distribution and includes all the needed pre-requisites and tools to maintain a ViciDial installation. This includes an installer to help setup ViciDial for both standalone and cluster installations.
+   Free community-based support is available on the `ViciDial Forums <https://www.vicidial.org/VICIDIALforum/index.php>`__.
+
+   ViciBox is based upon the `OpenSuSE Leap <https://www.opensuse.org/#Leap>`__ distribution.
 
 .. toctree::
    :maxdepth: 2
