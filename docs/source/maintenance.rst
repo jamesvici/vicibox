@@ -9,3 +9,4 @@ Maintenance
 
    maintenance/change-timezone
    maintenance/change-rootpw
+   maintenance/externalip
