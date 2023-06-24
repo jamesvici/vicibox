@@ -22,4 +22,5 @@ ViciBox V.11.0 Documentation
    installation
    networking
    maintenance
+   bugfixerrata
 
