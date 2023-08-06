@@ -11,10 +11,11 @@ vicibox-mdraid1
 ===============
    #. If not already, login as the ``root`` user to get to the **#** command prompt.
    #. Type ``vicibox-mdraid1`` and press ``ENTER`` to start the setup process.
-   #. A list of updates and a summary of them will be shown. Type ``Y`` and press ``ENTER`` to start downloading and installing updates.
-   #. Occasionally an update will ask if you want to view it's update notice. Press ``ENTER`` to continue if this happens.
+   #. A summary of what will be done is shown. Type ``Y`` and press ``ENTER`` start setting up the RAID array.
+   #. If any old RAID arrays are found the script will prompt if you want to remove them. Type ``Y`` and press ``ENTER`` to remove the old arrays.
+   #. When done, it's recommended to return to the command prompt instead of watching the arrays rebuild. Type ``N`` and press ``ENTER`` to exit to the **#** command prompt
+   #. To check the status of the MD RAID arrays, type ``cat /proc/mdstat`` and press ``ENTER``. md1 is the swap array and md2 is the root array.
    #. While not strictly necessary, it's advised to reboot the server at this time. Type ``reboot`` and press ``ENTER`` to reboot the server.
-
 
 
 Screenshots
@@ -23,9 +24,14 @@ Screenshots
       .. figure:: mdraid-1.png
          :alt: Add second drive and setup RAID 1
          :width: 665
-      
+
+   If old RAID detected, clear it out
+      .. figure:: mdraid-2.png 
+         :alt: If old RAID arrays are found, try to remove them  
+         :width: 665
+   
    Verify RAID array is setup
-      .. figure:: mdraid-2.png
+      .. figure:: mdraid-3.png
          :alt: Reboot for good measure for any system updates
          :width: 665
 
