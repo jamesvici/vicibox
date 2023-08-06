@@ -4,6 +4,7 @@ Phase 1.5
 #########
    Before ViciDial is installed and setup on the servers it is necessary to configure the network. Since this is a convenient stopping point it is also a good time to do other things like install updates. It's recommended to do both of these where possible
 
+   .. attention:: The MD RAID setup can be temperamental. If there are any problems it is recommended to wipe all drives in the system by doing ``wipefs -f -a /dev/sd<drive>`` for each drive in the system.
 
 .. toctree::
    :maxdepth: 2
@@ -11,3 +12,4 @@ Phase 1.5
 
    phase1_5/static-ip
    phase1_5/install-updates
+   phase1_5/mdraid-setup
