@@ -2,7 +2,7 @@
 
 MD RAID Setup
 *************
-   These instructions only apply if the :ref:`media-md` installation media was used. If the two drives are not the exact same size then the smaller drive must be the one used to install to. There is no way to add a second drive to the MD RAID array if it's not the same size or bigger then the first drive.
+   These instructions only apply if the :ref:`media-md` installation media was used. If the two drives are not the exact same size then the smaller drive must be the drive selected during installation. There is no way to add a second drive to a RAID array if it's not at least the same size or bigger then the first drive.
 
    .. warning:: MD RAID setup can be temperamental. If there are any problems during the installation it's recommended to wipe all drives and start over. That can be done by running ``wipefs -fa /dev/sda`` and ``wipefs -fa /dev/sdb`` prior to reinstalling.
 
