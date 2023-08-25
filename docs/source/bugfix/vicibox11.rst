@@ -7,4 +7,5 @@ ViciBox 11.0
       
    bugfix1100-1
    bugfix1100-2
+   bugfix1101-1
 
