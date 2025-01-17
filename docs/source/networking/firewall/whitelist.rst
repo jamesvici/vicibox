@@ -23,13 +23,6 @@ Example whitelist.conf:
 * 10.0.0.0/8
 * 1.2.3.4
 
-Screenshots
------------
-Select White List Mode
-   .. image:: networking/firewall/whitelist-1.png
-      :alt: Select ViciDial White List mode
-      :width: 665
-
 Setup
 =====
    The White List is only compatible with the Dynamic Portal. Below are the changes you would make to the ViciBox crontab entry. The recommendation is to just delete the old entries and copy-paste these in. The crontab entries shown are for White List Only and White List with Dynamic Portal.
