@@ -1,41 +1,43 @@
 .. _phase1_5-static-ip:
 
+===================
 Configure Static IP
-*******************
-   While not necessary it is highly recommend to use a static IP. Once ViciDial is installed it's configuration will be tied to the current LAN and WAN IP. If those IPs change then ViciDial's configuration must also change to match. While not usually a problem with a LAN, a static IP is very important for the WAN. This static WAN IP is what will allow ViciDial to work reliably behind firewalls and with SIP carriers. 
-   
-   This might not be a problem if the ISP doesn't rotate the IPs that often. My residential cable modem ISP seems to rotate the IP every 30 days. Still, the cost to get a static IP is usually worth what a few hours of unexpected downtime in the middle of the day will be.
-   
-   The IP address, net mask, and default gateway will be unique to your network and is beyond the scope of this document. While the DNS servers listed in the below example can be used safely it might be better to use the local router or ISP for DNS instead.
+===================
 
-   If there is a LAN and WAN network connected to the server then the WAN's default gateway should be used. There should only ever be one default gateway on the server no matter how many networks it is connected to.
+While not necessary it is highly recommend to use a static IP. Once ViciDial is installed it's configuration will be tied to the current LAN and WAN IP. If those IPs change then ViciDial's configuration must also change to match. While not usually a problem with a LAN, a static IP is very important for the WAN. This static WAN IP is what will allow ViciDial to work reliably behind firewalls and with SIP carriers. 
 
-   If this server is to be used in a ViciDial cluster then each server must have a unique hostname. The recommended convention is 'DBX', 'webX', and 'dialerX'. For example, a basic three server cluster would use the hostnames 'DB1', 'web1', and 'dialer1'. An additioner Telephony server would be 'dialer2', etc. Please limit the hostname to 16 characters or less.
-   
-   .. tabularcolumns:: p{0.132\linewidth}p{0.198\linewidth}p{0.330\linewidth}
-   .. list-table:: Example Network Settings
-      :name: express-network-info
-      :widths: 60 80
-      :class: longtable
-      :header-rows: 1
-      :align: center
+This might not be a problem if the ISP doesn't rotate the IPs that often. My residential cable modem ISP seems to rotate the IP every 30 days. Still, the cost to get a static IP is usually worth what a few hours of unexpected downtime in the middle of the day will be.
 
-      * - Setting
-        - Value
-      * - Host Name
-        - vicidocs
-      * - IP Address
-        - 192.168.50.4
-      * - Subnet Mask
-        - 255.255.255.0 (/24)
-      * - Default Gateway
-        - 192.168.50.1
-      * - Name Server 1
-        - 208.67.222.222
-      * - Name Server 2
-        - 208.67.220.220
-      
-   .. note:: While the server supports IPv6 ViciDial itself has not been extensively tested with it. Therefore the documentation will assume IPv4 only for all networking.
+The IP address, net mask, and default gateway will be unique to your network and is beyond the scope of this document. While the DNS servers listed in the below example can be used safely it might be better to use the local router or ISP for DNS instead.
+
+If there is a LAN and WAN network connected to the server then the WAN's default gateway should be used. There should only ever be one default gateway on the server no matter how many networks it is connected to.
+
+If this server is to be used in a ViciDial cluster then each server must have a unique hostname. The recommended convention is 'DBX', 'webX', and 'dialerX'. For example, a basic three server cluster would use the hostnames 'DB1', 'web1', and 'dialer1'. An additioner Telephony server would be 'dialer2', etc. Please limit the hostname to 16 characters or less.
+
+.. tabularcolumns:: p{0.132\linewidth}p{0.198\linewidth}p{0.330\linewidth}
+.. list-table:: Example Network Settings
+   :name: express-network-info
+   :widths: 60 80
+   :class: longtable
+   :header-rows: 1
+   :align: center
+
+   * - Setting
+     - Value
+   * - Host Name
+     - vicidocs
+   * - IP Address
+     - 192.168.50.4
+   * - Subnet Mask
+     - 255.255.255.0 (/24)
+   * - Default Gateway
+     - 192.168.50.1
+   * - Name Server 1
+     - 208.67.222.222
+   * - Name Server 2
+     - 208.67.220.220
+
+.. note:: While the server supports IPv6 ViciDial itself has not been extensively tested with it. Therefore the documentation will assume IPv4 only for all networking.
 
 yast lan
 ========

@@ -1,9 +1,10 @@
+===============
 11.0.0 MD Image
-***************
+===============
    The MD installation image was getting a /boot directory that was only 200 megs in size. This prevented newer kernel updates from getting installed. The fix is to remove the separate /boot partition and just use the / root filesystem for /boot. This has been corrected in ViciBox v.11.0.1. These instructions should only be followed if a ViciBox v.11.0.0 system has already had vicibox-mdraid1 ran successfully.
 
 Symptoms
-========
+--------
    When attempting to update the system using ``zypper up`` you will get an error when a new kernel attempts to install. This results in no new kernel updates being installed.
 
    .. code-block:: none
@@ -19,7 +20,7 @@ Symptoms
 
 
 The Fix
-=======
+-------
    #. If not already, login as the ``root`` user to get to the **#** command prompt.
    #. Copy and paste or type the following commands in to fix the issue:
 

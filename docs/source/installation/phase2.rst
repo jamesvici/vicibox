@@ -1,5 +1,5 @@
 Phase 2
-#######
+=======
    ViciDial is installed through the ``vicibox-install`` command. This command will ask a series of questions in order to determine how to install. A ViciDial cluster will use this command when setting up new servers.
    
    An alternative to this is the mostly automated :ref:`express` install. This actually runs the same program but with pre-defined settings. It is an all-in-one approach to ViciDial that can later be turned into a cluster if need be.

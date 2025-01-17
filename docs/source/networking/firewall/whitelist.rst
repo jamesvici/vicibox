@@ -1,8 +1,34 @@
 .. _white-list:
 
-White List
-**********
-   The white list allows certain IP address' through the build-in firewall. This is controlled through an IP List inside ViciDial called **ViciWhite**. This allows for easy administration as the firewall can be controlled from the Admin interface.
+==================
+ViciDial Whitelist
+==================
+
+The ViciDial White List mode is designed to only allow known good IP addresses to connect to the server. This is accomplished by integrating with the ViciDial Remote Agent interface to dynamically allow connections from agents as they connect. This mode also allows for static entries to be added for things like SIP carriers and other trusted sources.
+
+Configuration Steps
+-------------------
+#. If not already, login as the ``root`` user to get to the **#** command prompt
+#. Type ``vicibox-firewall`` and press ``ENTER``
+#. Using the arrow keys, select **ViciDial White List** and press ``ENTER``
+#. Type ``Y`` and press ``ENTER`` to confirm the change
+#. Review the output to ensure the change was successful
+
+Static Entries
+--------------
+Static entries can be added to the white list by editing the ``/etc/firewalld/whitelist.conf`` file. Each entry should be on its own line and can be either an IP address or a network in CIDR notation.
+
+Example whitelist.conf:
+* 192.168.1.0/24
+* 10.0.0.0/8
+* 1.2.3.4
+
+Screenshots
+-----------
+Select White List Mode
+   .. image:: networking/firewall/whitelist-1.png
+      :alt: Select ViciDial White List mode
+      :width: 665
 
 Setup
 =====

@@ -7,8 +7,8 @@ import datetime
 project = "ViciBox"
 copyright = "2005-%d, ViciDial Group" % datetime.datetime.now().year
 author = "James Pearson"
-release = "11.0"
-version = "11.0"
+release = "12.0"
+version = "12.0"
 
 # -- General configuration ---------------------------------------------------
 extensions = [

@@ -1,6 +1,6 @@
-**********
+==========
 Networking
-**********
+==========
    By default ViciBox will attempt to use DHCP on the first network interface. Any IP obtained will be shown on the server's display.
 
    .. tabularcolumns:: p{0.132\linewidth}p{0.198\linewidth}p{0.330\linewidth}

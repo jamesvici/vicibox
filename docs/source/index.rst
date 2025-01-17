@@ -3,9 +3,9 @@
    :align: center
    :alt: The ViciBox Logo
 
-############################
-ViciBox V.11.0 Documentation
-############################
+===============================
+ViciBox |release| Documentation
+===============================
 
    ViciBox is the official installation image for the `ViciDial® Call Center Suite <https://www.vicidial.org/vicidial.php>`__.
 

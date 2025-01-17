@@ -1,6 +1,6 @@
-***********
+===========
 Maintenance
-***********
+===========
     Common maintenance items on ViciBox
 
 .. toctree::
