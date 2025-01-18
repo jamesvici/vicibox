@@ -25,7 +25,7 @@ Installation Steps
    #. Type in the new root password you want to use and press ``ENTER``. To keep the old root password type in ``vicidial``.
    #. Type in the new root password again from the above step to confirm it and press ``ENTER``.
    #. If internet connectivity is available, the system will ask to install updates. Press ``ENTER`` to continue and install updates.
-   #. If the MD RAID installation image was used, the system will ask to setup the RAID array if appropriate target drives are present. Selct the appropriate drive number from the shown list and press ``ENTER``.
+   #. If the MD RAID installation image was used, the system will ask to setup the RAID array if appropriate target drives are present. Select the appropriate drive number from the shown list and press ``ENTER``.
    #. The RAID setup tool will ask to confirm the destruction of the target drive. Press ``ENTER`` to confirm the target drive.
    #. The RAID setup is complicated with all the various states that old drives can be in. If you run into any issues with RAID setup it is recommended to wipe the drives with ``wipefs -fa /dev/sdX`` (replace sdX with device ID) and restart the installation from step 1.
    #. Once the **vicibox12\:~ #** command prompt is displayed with a cursor, the installation is complete. It is highly recommended to remove the installation media and reboot. To reboot, type ``reboot`` and press ``ENTER``.
