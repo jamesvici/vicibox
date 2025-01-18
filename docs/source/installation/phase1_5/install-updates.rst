@@ -15,16 +15,18 @@ Installing Updates
 #. Occasionally an update will ask if you want to view it's update notice. Press ``ENTER`` to continue if this happens.
 #. While not strictly necessary, it's advised to reboot the server at this time. Type ``reboot`` and press ``ENTER`` to reboot the server.
 
-.. note:: It's not unusual for there to be up to 300 megs of updates depending on how old the installation media is.
+Some alternative commands for ``zypper up`` is ``zypper inr`` and ``zypper dup``. The ``zypper inr`` variant installs recommended packages most likely specific for the hardware or host. The ``zypper dup`` one installs packages that require repository changes like when adding a new repository.
+
+.. note:: It's not unusual for there to be up to 300 megs of updates depending on how old the system is. This can take a while to download and install depending upon the internet connection speed.
 
 Screenshots
 -----------
-   Run zypper up and install updates
+   Installing normal updates
       .. figure:: install-updates-1.png
-         :alt: Refresh repositories and fine new updates
+         :alt: Install updates with zypper up
          :width: 665
       
-   Reboot
+   Installing recommended updates
       .. figure:: install-updates-2.png
-         :alt: Reboot for good measure for any system updates
+         :alt: Install recommendations with zypper inr
          :width: 665

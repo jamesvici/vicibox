@@ -109,6 +109,8 @@ Screenshots
          :alt: Installation is complete when you have a command prompt
          :width: 665
 
+.. _raid-install-screenshots:
+
 RAID Specific
 -------------
 
@@ -119,14 +121,14 @@ RAID Specific
          :alt: Remove orphaned arrays
          :width: 665
 
-   Setup RAID array (if applicable)
+   Select target drive to add
       .. image:: ./phase1/select-raid-drive.png
-         :alt: Select RAID drive
+         :alt: Select RAID target drive
          :width: 665
 
-   RAID verify setup then reboot   
+   Verify successful setup then reboot   
       .. image:: ./phase1/raid-install-complete.png
-         :alt: RAID successfully setup according to /proc/mdstat
+         :alt: RAID successful according to cat /proc/mdstat
          :width: 665
 
    Add a new or spare drive to the array
