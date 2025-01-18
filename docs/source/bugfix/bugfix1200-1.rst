@@ -10,6 +10,7 @@
    
 Symptoms
 --------
+
    With the version of vicibox-mdraid1 that was included with the ViciBox v.12.0.0 image you can potentially end up with an improperly setup swap array. If you look at the output of /proc/mdstat and see /dev/md1 listed as (auto-read-only) then that is a good indication you have this issue. You can see an example of this in the below screenshot. On this newly installed ViciBox v.12.0.0 system without updates the root array contains /dev/sda4 and the swap array contains /dev/sdb3.
 
    Zombie RAID from previous ViciBox install
@@ -20,7 +21,7 @@ Symptoms
 The Fix
 -------
 
-   It is important to determine the correct partitions to be used for the swap array. In the above screenshot, /dev/sda3 and /dev/sdb3 are the swap partitions. This will depend on your install and drives used. In the above screenshot, here are the commands used to fix the swap array.
+   It is important to determine the correct partitions to be used for the swap array. By default, the third partition in the image is used for swap. In the above screenshot, /dev/sda3 and /dev/sdb3 would be the swap partitions since we have /dev/sda and /dev/sdb shown. If you have NVMe drives then it would most likely be /dev/nvme0n1p3 and /dev/nvme1n1p3 for swap partitions. This will **highly** depend on your install and drives used. Below are the commands that would be used to fix the above screenshot.
 
 
    .. code-block:: bash
