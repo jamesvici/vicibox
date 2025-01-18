@@ -74,7 +74,7 @@ html_context = {
     'github_user': 'jamvesvici',
     'github_repo': 'vicibox',
     'github_version': 'main/',
-    'conf_py_path': '/source/',
+    'conf_py_path': 'docs/source/',
 }
 
 # Documentation options
