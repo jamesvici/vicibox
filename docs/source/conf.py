@@ -17,6 +17,7 @@ extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.autosummary",
     "sphinx.ext.intersphinx",
+    "sphinx_rtd_dark_mode"
 ]
 
 intersphinx_mapping = {
@@ -40,7 +41,10 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 html_theme = "sphinx_rtd_theme"
 html_static_path = ["_static"]
 html_baseurl = "https://docs.vicibox.com/"
-html_theme_options = { 'style_nav_header_background': '#00AA0D', }
+html_theme_options = {
+    'style_nav_header_background': '#00AA0D',
+    "dark_mode_toggle": True,
+}
 #html_logo = 'images/Vicibox_pixel_green_whitebg_20180921.png'
 html_favicon = "images/favicon.ico"
 html_show_sourcelink = False
