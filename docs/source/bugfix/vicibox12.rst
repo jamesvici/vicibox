@@ -7,3 +7,4 @@ ViciBox 12.0
    :maxdepth: 2
 
    bugfix1200-1
+   bugfix1200-2
