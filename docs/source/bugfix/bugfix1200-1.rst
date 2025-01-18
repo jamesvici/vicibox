@@ -30,7 +30,7 @@ The Fix
       mdadm --stop /dev/md1
       mdadm --create --force /dev/md1 --level=1 --raid-devices=2 --metadata=1.2 /dev/sda3 /dev/sdb3
       mkswap /dev/md1
-      sudo sed -i '/swap/ s/^/#/' /etc/fstab
+      sed -i '/swap/ s/^/#/' /etc/fstab
       echo "UUID=$(blkid -s UUID -o value /dev/md2) swap swap defaults 0 0" >> /etc/fstab
       swapon -a
       cat /proc/mdstat
