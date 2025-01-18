@@ -9,6 +9,9 @@ copyright = "2005-%d, ViciDial Group" % datetime.datetime.now().year
 author = "James Pearson"
 release = "12.0"
 version = "12.0"
+language = 'en'
+locale_dirs = ['locale/']
+gettext_compact = False
 
 # -- General configuration ---------------------------------------------------
 extensions = [
@@ -17,7 +20,11 @@ extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.autosummary",
     "sphinx.ext.intersphinx",
-    "sphinx_rtd_dark_mode"
+    "sphinx_copybutton",
+    "sphinx_rtd_dark_mode",
+    "sphinx.ext.extlinks",
+    "sphinx.ext.ifconfig",
+    "sphinx.ext.viewcode",
 ]
 
 intersphinx_mapping = {
@@ -43,7 +50,16 @@ html_static_path = ["_static"]
 html_baseurl = "https://docs.vicibox.com/"
 html_theme_options = {
     'style_nav_header_background': '#00AA0D',
-    "dark_mode_toggle": True,
+    'logo_only': False,
+    'display_version': True,
+    'prev_next_buttons_location': 'bottom',
+    'style_external_links': True,
+    'sticky_navigation': True,
+    'navigation_depth': 4,
+    'includehidden': True,
+    'titles_only': False,
+    'collapse_navigation': True,
+    'analytics_id': 'G-XXXXXXXXXX'  # Replace with your GA ID
 }
 #html_logo = 'images/Vicibox_pixel_green_whitebg_20180921.png'
 html_favicon = "images/favicon.ico"
@@ -52,3 +68,17 @@ htmlhelp_basename = "viciboxdoc"
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = "sphinx"
+
+# SEO Options
+html_context = {
+    'display_github': True,
+    'github_user': 'vicidial',
+    'github_repo': 'vicibox',
+    'github_version': 'master',
+    'conf_py_path': '/docs/source/'
+}
+
+# Documentation options
+html_show_sphinx = False
+html_copy_source = False
+html_show_sourcelink = False

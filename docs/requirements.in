@@ -1,3 +1,5 @@
 Sphinx>=5,<6
 sphinx_rtd_theme
+sphinx_rtd_dark_mode
+sphinx_copybutton
 sphinxcontrib-blockdiag
