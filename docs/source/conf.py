@@ -71,7 +71,7 @@ pygments_style = "sphinx"
 # SEO Options
 html_context = {
     'display_github': True,
-    'github_user': 'jamvesvici',
+    'github_user': 'jamesvici',
     'github_repo': 'vicibox',
     'github_version': 'main/',
     'conf_py_path': 'docs/source/',
