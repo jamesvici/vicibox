@@ -51,7 +51,6 @@ html_baseurl = "https://docs.vicibox.com/"
 html_theme_options = {
     'style_nav_header_background': '#00AA0D',
     'logo_only': False,
-    'display_version': True,
     'prev_next_buttons_location': 'bottom',
     'style_external_links': True,
     'sticky_navigation': True,
@@ -72,10 +71,10 @@ pygments_style = "sphinx"
 # SEO Options
 html_context = {
     'display_github': True,
-    'github_user': 'vicidial',
+    'github_user': 'jamvesvici',
     'github_repo': 'vicibox',
-    'github_version': 'master',
-    'conf_py_path': '/docs/source/'
+    'github_version': 'main/',
+    'conf_py_path': '/source/',
 }
 
 # Documentation options
