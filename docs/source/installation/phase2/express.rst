@@ -25,32 +25,27 @@ ViciDial is now successfully installed and running. It's recommended to continue
 
 Screenshots
 -----------
-Run vicibox-express and install
+Run vicibox-express and reboot
    .. image:: express-1.png
-      :alt: Run vicibox-express to install
+      :alt: Run vicibox-express then reboot
       :width: 665
 
-Reboot when done
+Verify that ViciDial started (may take up to 5 minutes)
    .. image:: express-2.png
-      :alt: Reboot when done to cleanly load ViciDial
+      :alt: Verify screen and asterisk sessions running
       :width: 665
 
-Verify ViciDial is running
+Verify that the web interface is working
    .. image:: express-3.png
-      :alt: Verify that ViciDial and Asterisk are running
+      :alt: Go to the servers IP in a browser
       :width: 665
 
-Verify web server is up
+Login as default user (password is 1234)
    .. image:: express-4.png
-      :alt: Verify that the web server is running
+      :alt: Login as user 6666 with password 1234
       :width: 665
 
-Login to ViciDial
+Continue with the ViciDial setup
    .. image:: express-5.png
-      :alt: Login to ViciDial to continue setting it up
-      :width: 665
-   
-Continue on to the Initial Setup
-   .. image:: express-6.png
-      :alt: Continue on with the Initial ViciDial configuration
+      :alt: Continue with the normal ViciDial setup
       :width: 665
