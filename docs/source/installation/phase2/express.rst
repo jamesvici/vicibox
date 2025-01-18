@@ -32,7 +32,7 @@ Run vicibox-express and reboot
 
 Verify that ViciDial started (may take up to 5 minutes)
    .. image:: express-2.png
-      :alt: Verify screen and asterisk sessions running
+      :alt: Verify screen sessions and asterisk running
       :width: 665
 
 Verify that the web interface is working
