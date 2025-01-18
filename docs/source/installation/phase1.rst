@@ -2,7 +2,10 @@
 Phase 1
 =======
 
-   The installation of ViciBox is pretty straight forward. There have been some issues reported when installing over previous installations of Linux. The best way to insure a smooth installation is to wipe the drives before hand.
+   The following section uses the MD or MultiDevice software RAID version of ViciBox. While the installation itself is pretty straight forward the RAID setup is not always perfect. If you run into any issues with RAID setup it is recommended to wipe the drives with ``wipefs -fa /dev/sdX`` (replace sdX with device ID) and start over. The installation of the non-MD version is similar but with less steps.
+
+   .. note::
+      The installation process will destroy all data on the installation target disk. Make sure to backup any data you want to keep before proceeding.
 
 Installation Steps
 ------------------
@@ -21,9 +24,13 @@ Installation Steps
    #. Using the up and down arrow keys, select the system's local timezone and press ``ENTER``.
    #. Type in the new root password you want to use and press ``ENTER``. To keep the old root password type in ``vicidial``.
    #. Type in the new root password again from the above step to confirm it and press ``ENTER``.
-   #. At this point the system will apply the settings before finally giving a **vicibox11\:~ #** command prompt.
+   #. If internet connectivity is available, the system will ask to install updates. Press ``ENTER`` to continue and install updates.
+   #. If the MD RAID installation image was used, the system will ask to setup the RAID array if appropriate target drives are present. Selct the appropriate drive number from the shown list and press ``ENTER``.
+   #. The RAID setup tool will ask to confirm the destruction of the target drive. Press ``ENTER`` to confirm the target drive.
+   #. The RAID setup is complicated with all the various states that old drives can be in. If you run into any issues with RAID setup it is recommended to wipe the drives with ``wipefs -fa /dev/sdX`` (replace sdX with device ID) and restart the installation from step 1.
+   #. Once the **vicibox12\:~ #** command prompt is displayed with a cursor, the installation is complete. It is highly recommended to remove the installation media and reboot. To reboot, type ``reboot`` and press ``ENTER``.
    
-   Congrats, ViciBox has been installed.
+   Congrats, ViciBox has been installed. Please remember the password you used as it will be needed in the next phase.
 
 Screenshots
 -----------
@@ -52,9 +59,14 @@ Screenshots
          :alt: Login Prompt
          :width: 665
 
+   First Login
+      .. image:: ./phase1/first-login.png
+         :alt: First Login notice
+         :width: 665
+
    Select system locale
       .. image:: ./phase1/select-locale.png
-         :alt: Select systems local
+         :alt: Select systems locale
          :width: 665
 
    Select keyboard layout
@@ -87,7 +99,42 @@ Screenshots
          :alt: Confirm the new root password
          :width: 665
 
-   Command prompt, installation complete.
+   Install updates over internet
+      .. image:: ./phase1/install-updates.png
+         :alt: Install updates over the internet
+         :width: 665
+
+   Installation complete without RAID
       .. image:: ./phase1/installation-complete.png
          :alt: Installation is complete when you have a command prompt
+         :width: 665
+
+RAID Specific
+-------------
+
+   The following screenshots show installation sections related to the MD RAID image. This is only ran when multiple-drives are detected in the system and /dev/md2 is being used for root.
+   
+   Remove orphaned RAID arrays
+      .. image:: ./phase1/raid-orphans.png
+         :alt: Remove orphaned arrays
+         :width: 665
+
+   Setup RAID array (if applicable)
+      .. image:: ./phase1/select-raid-drive.png
+         :alt: Select RAID drive
+         :width: 665
+
+   RAID verify setup then reboot   
+      .. image:: ./phase1/raid-install-complete.png
+         :alt: RAID successfully setup according to /proc/mdstat
+         :width: 665
+
+   Add a new or spare drive to the array
+      .. image:: ./phase1/raid-add-drive.png
+         :alt: Add a new or spare drive to the array
+         :width: 665
+
+   Verify spare (S) drive is added to array
+      .. image:: ./phase1/raid-add-drive-complete.png
+         :alt: Verify spare drive is added to array
          :width: 665

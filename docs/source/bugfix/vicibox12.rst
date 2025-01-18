@@ -6,3 +6,4 @@ ViciBox 12.0
 .. toctree::
    :maxdepth: 2
 
+   bugfix1200-1
