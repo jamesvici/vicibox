@@ -115,11 +115,6 @@ RAID Specific
 -------------
 
    The following screenshots show installation sections related to the MD RAID image. This is only ran when multiple-drives are detected in the system and /dev/md2 is being used for root.
-   
-   Remove orphaned RAID arrays
-      .. image:: ./phase1/raid-orphans.png
-         :alt: Remove orphaned arrays
-         :width: 665
 
    Select target drive to add
       .. image:: ./phase1/select-raid-drive.png
