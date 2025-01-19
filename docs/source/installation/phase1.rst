@@ -117,7 +117,7 @@ RAID Specific
    The following screenshots show installation sections related to the MD RAID image. This is only ran when multiple-drives are detected in the system and /dev/md2 is being used for root.
 
    Select target drive to add
-      .. image:: ./phase1/select-raid-drive.png
+      .. image:: ./phase1/raid-select-drive.png
          :alt: Select RAID target drive
          :width: 665
 
