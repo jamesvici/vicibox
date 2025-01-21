@@ -1,6 +1,6 @@
-=============================
-12.0.1 server_updater.db_time
-=============================
+============================
+12.0.1 MariaDB TIMESTAMP fix
+============================
 
 If you are migrating a database from an older server to Vicibox v.12.0 you are not affected by this issue. This only applies to newly created databases loaded from the MySQL_AST_CREATE_tables.sql or through updates.
 
