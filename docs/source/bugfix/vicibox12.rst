@@ -8,3 +8,4 @@ ViciBox 12.0
 
    bugfix1200-1
    bugfix1200-2
+   bugfix1201-1
