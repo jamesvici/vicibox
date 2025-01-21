@@ -2,7 +2,7 @@
 12.0.1 server_updater.db_time
 =============================
 
-At some point the MySQL_AST_CREATE_tables.sql file in SVN inadvertently (or never?) had the ON UPDATE CURRENT_TIMESTAMP from the db_time field removed. It's also possible that this is a behavior that MariaDB changed in later version. The jury is out regardless. This result was the db_time field not updating when the row was updated.
+At some point the MySQL_AST_CREATE_tables.sql file in SVN inadvertently (or never?) had the ON UPDATE CURRENT_TIMESTAMP from the db_time field removed. It's also possible that this is a behavior that MariaDB changed in later versions. The jury is out. Regardless, the result was the db_time field not updating when the row was updated.
 
 Symptoms
 --------
