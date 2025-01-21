@@ -8,6 +8,8 @@ There are portions of the ViciDial schema that existed before a TIMESTAMP field 
 
 The official MariaDB documentation for this is `here <https://mariadb.com/docs/server/ref/mdb/system-variables/explicit_defaults_for_timestamp/>`_.
 
+ViciBox v.12.0.2 will be released once the schemas are updated to handle this new behavior. In the meantime, you can apply the fix below to your ViciBox system.
+
 Symptoms
 --------
 Symptoms vary, but basically all sorts of weird behavior will happen and ViciDial won't work right. The good news is that there's a setting to enable the old deprecated behavior.
