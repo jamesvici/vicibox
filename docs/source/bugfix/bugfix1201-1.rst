@@ -15,7 +15,7 @@ YaST firewall issue
 
 The Fix
 -------
-If you apply updates with ``zypper up`` , and you have no customized firewall settings you'll miss, you can simply copy the new external.xml zonefile over the old one. If you have customized firewall settings, you'll need to manually edit the external.xml file and remove the duplicate 'ssh' service or just modify the new one for your needs.
+If you apply updates with ``zypper up`` ,and you have no customized firewall settings you'll miss, you can simply copy the new external.xml zonefile over the old one. If you have customized firewall settings, you'll need to manually edit the external.xml file and remove the duplicate 'ssh' service or just modify the new one for your needs.
 
 .. code-block:: bash
    :caption: Copy replacement file over old one
