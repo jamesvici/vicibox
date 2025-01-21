@@ -17,7 +17,7 @@ Symptoms vary, but basically all sorts of weird behavior will happen and ViciDia
 
 The Fix
 -------
-Since this primarily only affects a new database (I.E. running vicibox-express), or when applying updates, it is generally not a problem when migrating a database from an older server. In this scenario you just need to run the following commands to fix the issue.
+The fix is to add the following line to your MariaDB configuration file and restart MariaDB.
 
 .. code-block:: bash
    :caption: Required fix and restart
@@ -26,7 +26,7 @@ Since this primarily only affects a new database (I.E. running vicibox-express),
    systemctl restart mariadb.service
 
 
-If you setup a new database in ViciBox v.12.0 or have applied updates you will need to export and re-import the database. Depending upon the size of your database, this process could take hours to complete. It's recommended to start this in a screen session. If you don't have production data or precious data on the server yet you can just add the configuration line to /etc/my.cnf.d/general.cnf and restart MariaDB. From there you would import or setup your ViciBox system normally.
+If you setup a new ViciBox v.12.0 database using vicibox-express, vicibox-installer, or have applied updates, then you will need to run the below optional fix. Alternatively, if your database contains no precious or production data in it, you can just drop the database altogether and re-run the installer. If you decide to just reinstall ViciBox and start over from scratch you would only need to run the required fix above.
 
 .. code-block:: bash
    :caption: Optional export and import to fix fields
