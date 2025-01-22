@@ -1,7 +1,8 @@
 ===========
 Maintenance
 ===========
-    Common maintenance items on ViciBox
+
+Common maintenance items on ViciBox
 
 .. toctree::
    :maxdepth: 2

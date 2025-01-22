@@ -1,5 +1,6 @@
 .. _media-std:
 
+============
 Standard ISO
 ============
 :download:`Standard Installation Image <https://download.vicidial.com/iso/vicibox/server/ViciBox_V12.x86_64-12.0.2.iso>`

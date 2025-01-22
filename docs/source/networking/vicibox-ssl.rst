@@ -8,7 +8,8 @@ ViciBox supports SSL out of the box with a self-signed certificate. While functi
 
 For clusters it's recommended to use a wildcard SSL certificate. These are available from several Certificate Authorities including the free providers. Commercial SSL providers tend to be less problematic and require yearly renewals. The free SSL providers generally require that the certificate be renewed every 30 to 90 days through an automated process. It's this automated process in conjunction with firewalls that tends to be an issue.
 
-.. attention:: Before SSL can be setup the server needs a Fully Qualified Domain Name aka 'FQDN'. For example, if 'your.domain.com' is the FQDN for the server then the ViciDial web interface should be accessible at 'http://your.domain.com' in a web browser. Until this is correctly working no SSL certificate ever will.
+.. attention::
+   Before SSL can be setup the server needs a Fully Qualified Domain Name aka 'FQDN'. For example, if 'your.domain.com' is the FQDN for the server then the ViciDial web interface should be accessible at 'http://your.domain.com' in a web browser. Until this is correctly working no SSL certificate ever will.
 
 Common Files
 ------------
@@ -17,6 +18,7 @@ To help SSL certificates work across a cluster without requiring multiple webRTC
 .. list-table:: Common SSL files
    :widths: 60 170
    :header-rows: 1
+   :align: center
 
    * - File Location
      - Purpose
@@ -34,6 +36,7 @@ The ``vicibox-ssl`` script automates the process of requesting and installing an
 .. list-table:: Example SSL settings
    :widths: 60 80
    :header-rows: 1
+   :align: center
 
    * - Setting
      - Value
@@ -59,4 +62,4 @@ Screenshots
 Run vicibox-ssl
    .. figure:: vicibox-ssl/vicibox-ssl-1.png
       :alt: Run vicibox-ssl and setup SSL certificate
-      :width: 665
+      :width: 640

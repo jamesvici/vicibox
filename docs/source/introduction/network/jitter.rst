@@ -16,4 +16,4 @@ The screenshot shows bad jitter in the bottom graph. You can see the black lines
 
 .. image:: pingplotter-jitter.png
    :alt: PingPlotter showing jitter example
-   :width: 665
+   :width: 640

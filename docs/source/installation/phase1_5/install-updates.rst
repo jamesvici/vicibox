@@ -17,16 +17,17 @@ Installing Updates
 
 Some alternative commands for ``zypper up`` is ``zypper inr`` and ``zypper dup``. The ``zypper inr`` variant installs recommended packages most likely specific for the hardware or host. The ``zypper dup`` one installs packages that require repository changes like when adding a new repository.
 
-.. note:: It's not unusual for there to be up to 300 megs of updates depending on how old the system is. This can take a while to download and install depending upon the internet connection speed.
+.. note::
+   It's not unusual for there to be up to 300 megs of updates depending on how old the system is. This can take a while to download and install depending upon the internet connection speed.
 
 Screenshots
 -----------
    Installing normal updates
-      .. figure:: install-updates-1.png
+      .. image:: install-updates-1.png
          :alt: Install updates with zypper up
-         :width: 665
+         :width: 640
       
    Installing recommended updates
-      .. figure:: install-updates-2.png
+      .. image:: install-updates-2.png
          :alt: Install recommendations with zypper inr
-         :width: 665
+         :width: 640

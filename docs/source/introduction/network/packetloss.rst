@@ -14,5 +14,5 @@ This screenshot shows packet loss occuring at hop 4. You can tell because all ho
 
 .. image:: pingplotter-packetloss.png
    :alt: PingPlotter Screenshot with Packet Loss
-   :width: 665
+   :width: 640
 
