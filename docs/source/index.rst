@@ -17,6 +17,8 @@ Free community-based support is available on the `ViciDial Forums <https://www.v
 
 ViciBox is based upon the `OpenSuSE Leap <https://www.opensuse.org/#Leap>`__ distribution. The official `OpenSuSE Documentation <https://doc.opensuse.org/>`__ is also available online.
 
+Watch the `ViciBox v.12.0 Phase 1 Installation Video <https://www.youtube.com/watch?v=zPnjHD88Ohk>`__.
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents
