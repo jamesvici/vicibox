@@ -10,7 +10,7 @@ These instructions only apply if the :ref:`media-md` installation media was used
    MD RAID setup can be temperamental. If there are any problems during the installation it's recommended to wipe all drives and start over. That can be done with wipefs, I.E. ``wipefs -fa /dev/sda`` or ``wipefs -fa /dev/nvme0``, prior to installing.
 
 Setup Instructions
-----------------
+------------------
 #. If not already, login as the ``root`` user to get to the **#** command prompt.
 #. Type ``vicibox-mdraid1`` and press ``ENTER`` to start the setup process.
 #. If there are any orphaned RAID arrays, they will be shown. To remove them press ``Y`` and then ``ENTER``. This will destroy the data on these drives.

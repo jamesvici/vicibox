@@ -15,7 +15,7 @@ If there is a LAN and WAN network connected to the server then the WAN's default
 If this server is to be used in a ViciDial cluster then each server must have a unique hostname. The recommended convention is 'DBX', 'webX', and 'dialerX'. For example, a basic three server cluster would use the hostnames 'DB1', 'web1', and 'dialer1'. An additioner Telephony server would be 'dialer2', etc. Please limit the hostname to 16 characters or less.
 
 Network Settings
---------------
+----------------
 .. list-table:: Example Network Configuration
    :widths: 30 70
    :header-rows: 1
@@ -40,7 +40,7 @@ Network Settings
    While the server supports IPv6 ViciDial itself has not been extensively tested with it. Therefore the documentation will assume IPv4 only for all networking.
 
 YaST Network Configuration
-------------------------
+--------------------------
 #. If not already, login as the ``root`` user to get to the **#** command prompt.
 #. Type ``yast lan`` to start the network configuration.
 #. Press the ``TAB`` key until the network interface is highlighted.
