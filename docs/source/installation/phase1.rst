@@ -2,26 +2,26 @@
 Phase 1
 =======
 
-The following section uses the MD or MultiDevice software RAID version of ViciBox. If you run into any issues with RAID setup it is recommended to wipe the drives with ``wipefs -fa /dev/sdX`` (replace sdX with device ID) and start over. The installation of the non-MD version is similar but with less steps.
+The following section uses the MD or MultiDevice software RAID version of ViciBox. If you run into issues with RAID setup it is recommended to wipe the drives with ``wipefs -fa /dev/sdX`` (replace sdX with device ID) and start over. The installation of the non-MD version is similar but with fewer steps.
 
 .. note::
    The installation process will destroy all data on the installation target disk. Make sure to backup any data you want to keep before proceeding.
 
 Installation Steps
-----------------
+------------------
 #. Boot from the install :ref:`media`.
-#. By default the install media will boot from the servers local drive. Select **Install ViciBox** and press ``ENTER`` to start the ViciBox install.
-#. If there are multiple disks present in the system you will need to select the boot disk. Typically the first disk in the list is the first boot disk. Using the up and down arrow keys select the installation disk and press ``ENTER``
-#. A confirmation dialog box will open to confirm the destruction of all data on the installation disk. If you proceed past this point there will be permanent data loss on the installation disk. Press ``ENTER`` to select **YES** and start the installation process.
+#. By default the install media will boot from the server's local drive. Select **Install ViciBox** and press :kbd:`Enter` to start the ViciBox install.
+#. If there are multiple disks present in the system you will need to select the boot disk. Typically the first disk in the list is the first boot disk. Using the up and down arrow keys select the installation disk and press :kbd:`Enter`.
+#. A confirmation dialog box will open to confirm the destruction of all data on the installation disk. If you proceed past this point there will be permanent data loss on the installation disk. Press :kbd:`Enter` to select **Yes** and start the installation process.
 #. You will see a couple of progress indicators as the installer copies ViciBox to the installation disk. After that the system will boot from the installation disk and continue installing. After a short wait a **login:** prompt will be displayed along with the current network configuration. At this point the rest of the instruction can be carried out through either the console or SSH.
-#. At the **login:** prompt type ``root`` and press ``ENTER``
-#. The first root login to the system will start a configuration wizard. Press ``ENTER`` to continue.
-#. Using the up and down arrow keys, select the system's localisation and press ``ENTER``.
-#. Using the up and down arrow keys, select the system's keyboard layout and press ``ENTER``.
-#. Using the up and down arrow keys, read through the license until satisfied. Press ``ENTER`` to continue.
-#. Using the ``TAB`` key, select **Yes** and press ``ENTER`` to accept the license.
-#. Using the up and down arrow keys, select the system's local timezone and press ``ENTER``.
-#. Type in the new root password you want to use and press ``ENTER``. To keep the old root password type in ``vicidial``.
+#. At the **login:** prompt type ``root`` and press :kbd:`Enter`.
+#. The first root login to the system will start a configuration wizard. Press :kbd:`Enter` to continue.
+#. Using the up and down arrow keys, select the system's localisation and press :kbd:`Enter`.
+#. Using the up and down arrow keys, select the system's keyboard layout and press :kbd:`Enter`.
+#. Using the up and down arrow keys, read through the license until satisfied. Press :kbd:`Enter` to continue.
+#. Using the :kbd:`Tab` key, select **Yes** and press :kbd:`Enter` to accept the license.
+#. Using the up and down arrow keys, select the system's local timezone and press :kbd:`Enter`.
+#. Type in the new root password you want to use and press :kbd:`Enter`. To keep the old root password type in ``vicidial``.
 #. Type in the new root password again from the above step to confirm it and press ``ENTER``.
 #. If internet connectivity is available, the system will ask to install updates. Press ``ENTER`` to continue and install updates.
 #. If the MD RAID installation image was used, the system will ask to setup the RAID array if appropriate target drives are present. Select the appropriate drive number from the shown list and press ``ENTER``.
@@ -30,6 +30,12 @@ Installation Steps
 #. Once the **vicibox12\:~ #** command prompt is displayed with a cursor, the installation is complete. It is highly recommended to remove the installation media and reboot. To reboot, type ``reboot`` and press ``ENTER``.
    
 Congrats, ViciBox has been installed. Please remember the password you used as it will be needed in the next phase.
+
+.. _installation-video:
+
+Installation Video
+------------------
+Watch the `ViciBox v.12.0 Phase 1 Installation Video <https://www.youtube.com/watch?v=zPnjHD88Ohk>`__.
 
 Screenshots
 -----------
