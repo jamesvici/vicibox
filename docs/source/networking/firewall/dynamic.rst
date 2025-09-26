@@ -1,11 +1,11 @@
 .. _dynamic-portal:
 
 Dynamic Portal
-**************
+==============
    The dynamic portal allows for remote or work-from-home agents to authenticate with their ViciDial logins on a separate web portal. This portal is standalone outside the framework of ViciDial and restricts how fast authentication attempts can be made. It allows agents to dynamically add their IP to the firewall for ViciDial.
 
 Setup
-=====
+-----
    The dynamic portal is only compatible with the White List and is often ran in conjunction with it.
 
    .. code-block:: none
@@ -13,7 +13,7 @@ Setup
 
       ### ViciBox integrated firewall, using whitelist only, and check once every minute
       @reboot /usr/bin/VB-firewall --dynamic --quiet
-      * * * * * /usr/bin/VB-firewall --white --quiet
+      * * * * * /usr/bin/VB-firewall --dynamic --quiet
 
    .. code-block:: none
       :caption: White List with Dynamic Portal crontab
@@ -28,7 +28,7 @@ Setup
 
    
 Enable Portal
-=============
+-------------
    The dynamic portal needs to be exposed to the Public zone. While the portal works with standard HTTP it's recommended to only use HTTPS. This will require a properly setup DNS and SSL certificate. If the SSL certificate is handled outside of ``vicibox-ssl`` then /etc/apache2/vhosts.d/dynportal-ssl.conf needs to be updated to point to the correct SSL certs.
 
    .. code-block:: bash
@@ -40,7 +40,7 @@ Enable Portal
    The portal should now be reachable by going to https://your.server.com:446/valid8.php
 
 Obscurity
-=========
+---------
    Since security by obscurity can be a good thing, it's also possible to change the dynamic portal to run on another port besides 446. To do that two files will need to be modified as well as the above firewall rule. References to port '446' will need to be changed to your own random port of choice.
 
    .. tabularcolumns:: p{0.132\linewidth}p{0.198\linewidth}

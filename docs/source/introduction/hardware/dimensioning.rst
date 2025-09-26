@@ -1,10 +1,9 @@
-.. _dimensioning:
 
-============
+
 Dimensioning
 ============
 
-Server Scaling and Dimensioning is one of the hardest parts of ViciDial. The specifications provided are more of a guideline then a hard rule. ViciBox and ViciDial itself will run on anything you can install it to. If you're just doing sandbox testing or dev work then literally anything will work.
+Server scaling and dimensioning is one of the hardest parts of ViciDial. The specifications provided are more of a guideline than a hard rule. ViciBox and ViciDial itself will run on anything you can install it to. If you're just doing sandbox testing or dev work, then literally anything will work.
 
 Express Box
 -----------

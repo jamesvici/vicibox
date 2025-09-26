@@ -1,28 +1,49 @@
-=================
-11.0.0 AGI module
-=================
-   The res_speech.so module is needed for the res_agi.so module to load which ViciDial requires. An old modules.conf was inadvertently packaged with ViciBox v.11.0.0 which prevents res_speech.so from loading which further prevents res_agi.so from loading as well. Removing the ``noload => res_speech.so`` from ``/etc/asterisk/modules.conf`` and rebooting will fix things.
 
-   The fix should only be ran on servers that have already been installed. If ``zypper up`` was ran before ``vicibox-install`` was there should be no need to run the below fix.
+ViciBox 11.0.0 AGI Module Bug
+=============================
+
+This bug affects ViciBox v.11.0.0 installations where the res_agi.so module fails to load due to an outdated modules.conf file. The ``res_speech.so`` module is required for ``res_agi.so`` to load, but the packaged configuration prevents this, causing ViciDial to malfunction. Removing the ``noload => res_speech.so`` line from ``/etc/asterisk/modules.conf`` and rebooting resolves the issue.
+
+.. note::
+   This fix is only needed for servers already installed with ViciBox v.11.0.0. If you ran ``zypper up`` before ``vicibox-install``, you do not need to apply this fix.
 
 Symptoms
 --------
-   Telephony servers with this issue will have log output stating that no application can be found for the AGI extension.
 
-   .. code-block:: none
-      :caption: Example Log Output
+Telephony servers with this issue will show log output stating that no application can be found for the AGI extension.
 
-      [Jun 28 12:47:30] == Using SIP RTP CoS mark 5
-      [Jun 28 12:47:30] > 0x7fd550024340 -- Strict RTP learning after remote address set to: 192.168.1.106:12722
-      [Jun 28 12:47:30] WARNING[25228][C-00000006]: pbx.c:2928 pbx_extension_helper: No application 'AGI' for extension (defaultlog, 9684, 1)
-      [Jun 28 12:47:30] == Spawn extension (defaultlog, 9684, 1) exited non-zero on 'SIP/145-00000008'
-      [Jun 28 12:47:30] WARNING[25228][C-00000006]: pbx.c:2928 pbx_extension_helper: No application 'AGI' for extension (defaultlog, h, 1)
-      [Jun 28 12:47:30] == Spawn extension (defaultlog, h, 1) exited non-zero on 'SIP/145-00000008'
+.. code-block:: none
+   :caption: Example Log Output
+
+   [Jun 28 12:47:30] == Using SIP RTP CoS mark 5
+   [Jun 28 12:47:30] > 0x7fd550024340 -- Strict RTP learning after remote address set to: 192.168.1.106:12722
+   [Jun 28 12:47:30] WARNING[25228][C-00000006]: pbx.c:2928 pbx_extension_helper: No application 'AGI' for extension (defaultlog, 9684, 1)
+   [Jun 28 12:47:30] == Spawn extension (defaultlog, 9684, 1) exited non-zero on 'SIP/145-00000008'
+   [Jun 28 12:47:30] WARNING[25228][C-00000006]: pbx.c:2928 pbx_extension_helper: No application 'AGI' for extension (defaultlog, h, 1)
+   [Jun 28 12:47:30] == Spawn extension (defaultlog, h, 1) exited non-zero on 'SIP/145-00000008'
 
 The Fix
 -------
-   #. If not already, login as the ``root`` user to get to the **#** command prompt.
-   #. Type the command ``sed -i 's/^noload => res_speech.so/;noload => res_speech.so/' /etc/asterisk/modules.conf`` and press ``ENTER``.
-   #. Reboot the server by typing ``reboot`` and pressing ``ENTER`` or restart asterisk by running ``asterisk -rx "core restart now"``.
+
+To resolve this issue, follow these steps:
+
+   #. Log in as the ``root`` user to access the ``#`` command prompt.
+   #. Run the following command to comment out the problematic line:
+
+      .. code-block:: bash
+
+         sed -i 's/^noload => res_speech.so/;noload => res_speech.so/' /etc/asterisk/modules.conf
+
+   #. Reboot the server:
+
+      .. code-block:: bash
+
+         reboot
+
+      Alternatively, you can restart Asterisk without rebooting:
+
+      .. code-block:: bash
+
+         asterisk -rx "core restart now"
 
 

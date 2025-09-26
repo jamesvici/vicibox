@@ -1,11 +1,14 @@
-=======
+
+
+.. _media:
+
 Phase 1
 =======
 
-The following section uses the MD or MultiDevice software RAID version of ViciBox. If you run into issues with RAID setup it is recommended to wipe the drives with ``wipefs -fa /dev/sdX`` (replace sdX with device ID) and start over. The installation of the non-MD version is similar but with fewer steps.
+The following section uses the MD (MultiDevice) software RAID version of ViciBox. If you run into issues with RAID setup, it is recommended to wipe the drives with ``wipefs -fa /dev/sdX`` (replace sdX with device ID) and start over. The installation of the non-MD version is similar but with fewer steps.
 
 .. note::
-   The installation process will destroy all data on the installation target disk. Make sure to backup any data you want to keep before proceeding.
+   The installation process will destroy all data on the installation target disk. Make sure to back up any data you want to keep before proceeding.
 
 Installation Steps
 ------------------

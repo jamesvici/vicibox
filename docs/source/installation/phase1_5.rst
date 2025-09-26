@@ -1,10 +1,8 @@
-.. _phase1_5:
 
-=========
 Phase 1.5
 =========
 
-Before ViciDial is installed and setup on the servers it is necessary to configure the network. Since this is a convenient stopping point it is also a good time to do other things like install updates. It's recommended to do both of these where possible
+Before ViciDial is installed and set up on the servers, it is necessary to configure the network. Since this is a convenient stopping point, it is also a good time to do other things like install updates. It's recommended to do both of these where possible.
 
 .. toctree::
    :maxdepth: 2

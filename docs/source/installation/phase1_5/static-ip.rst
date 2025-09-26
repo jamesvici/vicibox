@@ -1,10 +1,8 @@
-.. _phase1_5-static-ip:
 
-===========
 Static IP
-===========
+=========
 
-While not necessary it is highly recommend to use a static IP. Once ViciDial is installed it's configuration will be tied to the current LAN and WAN IP. If those IPs change then ViciDial's configuration must also change to match. While not usually a problem with a LAN, a static IP is very important for the WAN. This static WAN IP is what will allow ViciDial to work reliably behind firewalls and with SIP carriers. 
+While not necessary, it is highly recommended to use a static IP. Once ViciDial is installed, its configuration will be tied to the current LAN and WAN IP. If those IPs change, then ViciDial's configuration must also change to match. While not usually a problem with a LAN, a static IP is very important for the WAN. This static WAN IP is what will allow ViciDial to work reliably behind firewalls and with SIP carriers.
 
 This might not be a problem if the ISP doesn't rotate the IPs that often. My residential cable modem ISP seems to rotate the IP every 30 days. Still, the cost to get a static IP is usually worth what a few hours of unexpected downtime in the middle of the day will be.
 

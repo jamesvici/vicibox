@@ -1,14 +1,13 @@
-.. _voip-black-list:
 
-================
 VoIP Black List
-================
+===============
 
-This mode of operation downloads the `VoIP Black List <https://voipbl.org/>`_ and loads it into the firewall. This is a community submitted list that contains over 55K IP entries of known SIP abusers.
+This mode of operation downloads the `VoIP Black List <https://voipbl.org/>`_ and loads it into the firewall. This is a community-submitted list that contains over 55,000 IP entries of known SIP abusers.
 
 Default Operation
 -----------------
-This mode of operation is the ViciBox default for new server installations. It is enabled through the the root's crontab.
+
+This mode of operation is the ViciBox default for new server installations. It is enabled through the root's crontab.
 
 .. code-block:: none
    :caption: Default crontab entry
@@ -18,7 +17,7 @@ This mode of operation is the ViciBox default for new server installations. It i
    @reboot /usr/bin/VB-firewall --voipbl --noblack --quiet
    0 */6 * * * /usr/bin/VB-firewall --voipbl --noblack --quiet
 
-To disable the VoIP Black List just comment out the last two lines above in the crontab.
+To disable the VoIP Black List, just comment out the last two lines above in the crontab.
 
 .. code-block:: none
    :caption: Commented crontab entry

@@ -1,8 +1,6 @@
-.. _phase1_5-install-updates:
 
-==================
 Install Updates
-==================
+===============
 
 While not required, it is *highly* recommended to install updates. This will update the ViciBox installer used in phase 2 as well as any new bug fixes or security updates. Internet connectivity is required to install updates. If the server is used in a secured network without internet access, updates can be skipped. It's still recommended to at least install updates when the OS is first installed prior to securing the server.
 

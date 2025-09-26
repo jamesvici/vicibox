@@ -1,11 +1,11 @@
 .. _black-list:
 
 Black List
-**********
+==========
    The Black List blocks specific IP address' from accessing the server. This is controlled through an IP List inside ViciDial called **ViciBlack**. This allows for easy administration as the firewall can be controlled from the Admin interface.
 
 Setup
-=====
+-----
    The Black List needs to be setup in the crontab first.
 
    .. code-block:: none
@@ -26,7 +26,7 @@ Setup
    The IP List feature must be enabled under :menuselection:`Admin --> Settings`.
 
 Control
-=======
+-------
    The White List can be controlled through the ``ViciWhite`` IP list. This can be found by going to :menuselection:`Admin --> IP Lists`. The format is simple with one IP or CIDR network per line. Any changes made may take up to 2-minutes to apply.
 
    .. code-block:: none

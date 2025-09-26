@@ -1,4 +1,3 @@
-====================
 Change Root Password
 ====================
 
@@ -18,7 +17,7 @@ The root user is everything in Linux. It's highly recommended to change the root
 .. tip::
    While a truly random password is the most secure, a password you can remember is more useful. I recommend basing the password around a 'phrase' to help. As an example, albeit a bad one, of this is the password 'ViciPass4U!'.
 
-Change Password Steps 
+Change Password Steps
 ---------------------
 #. If not already, login as the ``root`` user to get to the **#** command prompt
 #. Type ``passwd`` and press ``ENTER`` to change the root password

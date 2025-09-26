@@ -5,7 +5,6 @@
    :alt: The ViciBox Logo
    :width: 320
 
-===============================
 ViciBox |release| Documentation
 ===============================
 

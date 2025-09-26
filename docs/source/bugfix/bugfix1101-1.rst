@@ -1,14 +1,26 @@
-=====================
-11.0.1 MariaDB Limits
-=====================
-   The MariaDB limits config file was erroneously put in /etc/security instead of /etc/security/limits.d. The fix is to simply move the file to the right directory. This issue primarily effects larger cluster setups but it's possible for a single ViciBox Express setup to also have this issue.
+
+ViciBox 11.0.1 MariaDB Limits Bug
+=================================
+
+This bug affects ViciBox v.11.0.1 installations where the MariaDB limits config file was mistakenly placed in ``/etc/security`` instead of ``/etc/security/limits.d``. The fix is to move the file to the correct directory. This issue primarily affects larger cluster setups, but single ViciBox Express setups may also be impacted.
 
 Symptoms
 --------
-   There will be MariaDB logs statings that they cannot open a table, tmp file, can't spawn process, limit reached, etc.
+You may see MariaDB logs stating that they cannot open a table, create a tmp file, can't spawn a process, or that a limit has been reached.
 
 The Fix
 -------
-   #. If not already, login as the ``root`` user to get to the **#** command prompt.
-   #. Type in ``mv /etc/security/mysql.conf /etc/security/limits.d/mysql.conf`` and press ``ENTER``
-   #. When ready, type ``reboot`` and press ``ENTER`` to reboot and load new settings
+To resolve this issue, follow these steps:
+
+   #. Log in as the ``root`` user to access the ``#`` command prompt.
+   #. Move the MariaDB limits config file to the correct directory:
+
+      .. code-block:: bash
+
+         mv /etc/security/mysql.conf /etc/security/limits.d/mysql.conf
+
+   #. Reboot the server to load the new settings:
+
+      .. code-block:: bash
+
+         reboot
