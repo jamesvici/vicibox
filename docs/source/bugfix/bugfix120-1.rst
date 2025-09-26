@@ -9,7 +9,7 @@ The primary tell-tale sign of this is extremely large error and optionally acces
 
 The Fix
 -------
-To resolve this issue simply reinstall firewallD
+The below commands will restore the vicibox optimized settings in php.ini
 
    .. code-block:: bash
       :caption: Required fix and restart
