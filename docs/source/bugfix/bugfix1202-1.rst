@@ -16,5 +16,6 @@ To resolve this issue simply reinstall firewallD
       :caption: Required fix and restart
 
       zypper in --force firewalld
+      reboot #optional, but recommended
 
 This also applies to all releases of ViciBox12 since the update is for the OpenSuSE 15.6 distro.
