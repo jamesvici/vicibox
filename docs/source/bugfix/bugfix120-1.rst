@@ -14,7 +14,7 @@ The below commands will restore the vicibox optimized settings in php.ini
    .. code-block:: bash
       :caption: Required fix and restart
 
-      /usr/bin/sed -i "s/^error_reporting = E_ALL.*/error_reporting = E_ALL \& \~E_NOTICE \& \~E_DEPRECATED \& \~E_STRICT \& \~E_WARNING/" /etc/php8/apache2/php.ini
+      sed -i "s/^error_reporting = E_ALL.*/error_reporting = E_ALL \& \~E_NOTICE \& \~E_DEPRECATED \& \~E_STRICT \& \~E_WARNING/" /etc/php8/apache2/php.ini
       sed -i 's/;opcache.enable=1/opcache.enable=1/g' /etc/php8/apache2/php.ini
       sed -i 's/;opcache.memory_consumption=128/opcache.memory_consumption=128/g' /etc/php8/apache2/php.ini
       sed -i 's/;opcache.interned_strings_buffer=8/opcache.interned_strings_buffer=16/g' /etc/php8/apache2/php.ini
