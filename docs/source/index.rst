@@ -26,8 +26,8 @@ Previous Versions
 -----------------
 This manual covers ViciBox |release|. The manuals for earlier releases, including their bug fixes and errata, are still available:
 
-* `ViciBox v.12.0 Documentation <https://docs.vicibox.com/en/vicibox12/>`__
-* `ViciBox v.11.0 Documentation <https://docs.vicibox.com/en/vicibox11/>`__
+* `ViciBox v.12.0 Documentation <https://docs.vicibox.com/en/12.0/>`__
+* `ViciBox v.11.0 Documentation <https://docs.vicibox.com/en/11.0/>`__
 
 .. toctree::
    :maxdepth: 2
