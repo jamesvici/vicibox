@@ -14,9 +14,20 @@ Official support is available through the `ViciDial Group <https://www.vicidial.
 
 Free community-based support is available on the `ViciDial Forums <https://www.vicidial.org/VICIDIALforum/index.php>`__.
 
-ViciBox is based upon the `OpenSuSE Leap <https://www.opensuse.org/#Leap>`__ distribution. The official `OpenSuSE Documentation <https://doc.opensuse.org/>`__ is also available online.
+ViciBox |release| is based upon the `openSUSE Leap 16.0 <https://www.opensuse.org/#Leap>`__ distribution. The official `openSUSE Documentation <https://doc.opensuse.org/>`__ is also available online.
 
-See the :ref:`installation-video` for a visual guide to installing ViciBox.
+Leap 16.0 no longer includes YaST, so ViciBox |release| comes with its own administration program, the :ref:`manager`. The :ref:`manager` is designed to be easy to use and simplify the most common configuration tasks.
+
+Coming from an earlier ViciBox? :ref:`whats-new` lists what changed.
+
+.. _previous-manuals:
+
+Previous Versions
+-----------------
+This manual covers ViciBox |release|. The manuals for earlier releases, including their bug fixes and errata, are still available:
+
+* `ViciBox v.12.0 Documentation <https://docs.vicibox.com/en/vicibox12/>`__
+* `ViciBox v.11.0 Documentation <https://docs.vicibox.com/en/vicibox11/>`__
 
 .. toctree::
    :maxdepth: 2
@@ -24,7 +35,8 @@ See the :ref:`installation-video` for a visual guide to installing ViciBox.
 
    introduction
    installation
+   manager
    networking
+   selinux
    maintenance
    bugfixerrata
-

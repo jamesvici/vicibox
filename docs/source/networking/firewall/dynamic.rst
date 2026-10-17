@@ -6,38 +6,24 @@ Dynamic Portal
 
 Setup
 -----
-   The dynamic portal is only compatible with the White List and is often ran in conjunction with it.
+   The dynamic portal can be used alone or together with the :ref:`white-list`. It needs a Fully Qualified Domain Name and a valid SSL certificate for HTTPS; see :ref:`ssl`.
 
-   .. code-block:: none
-      :caption: Dynamic Portal only crontab
+   #. Log in as ``root``, type ``vicibox`` and press :kbd:`Enter` to start the :ref:`manager`.
+   #. Select **Dynamic portal** and press :kbd:`Enter`.
+   #. Tick **HTTPS portal on port 446**. The plain HTTP portal on port 81 is also available, but not recommended: agents' passwords would cross the internet unencrypted.
+   #. In **Portal host name**, type in the server's FQDN, I.E. ``vicidocs.vicibox.com``.
 
-      ### ViciBox integrated firewall, using whitelist only, and check once every minute
-      @reboot /usr/bin/VB-firewall --dynamic --quiet
-      * * * * * /usr/bin/VB-firewall --dynamic --quiet
+      .. image:: /images/vicibox13/dynportal.png
+         :alt: The Dynamic portal screen with the HTTPS and plain HTTP portals and the portal host name
+         :width: 720
 
-   .. code-block:: none
-      :caption: White List with Dynamic Portal crontab
+   #. Press **Apply** and confirm. The portal's port is opened in the **public** zone.
+   #. Select **Firewall**, tick **Dynamic portal logins only** (and **ViciWhite list only** if the White List is used too), press **Apply** and confirm.
+   #. Remove every service from the **public** zone except **rtp**, **dhcpv6-client** and the portal (**dynportal-ssl**), so that only agents who logged in reach anything else (see :ref:`firewall-zones`).
 
-      ### ViciBox integrated firewall, using whitelist only, and check once every minute
-      @reboot /usr/bin/VB-firewall --white --dynamic --quiet
-      * * * * * /usr/bin/VB-firewall --white --dynamic --quiet
-
-   All services under the **Public** zone should be removed except **dhcpv6-client** and **rtp**.
-
-   Any IP address from the Dynamic Portal will be handled through the **External** zone in ``yast firewall``. By default all the services needed for ViciDial are already listed in this zone.
-
-   
-Enable Portal
--------------
-   The dynamic portal needs to be exposed to the Public zone. While the portal works with standard HTTP it's recommended to only use HTTPS. This will require a properly setup DNS and SSL certificate. If the SSL certificate is handled outside of ``vicibox-ssl`` then /etc/apache2/vhosts.d/dynportal-ssl.conf needs to be updated to point to the correct SSL certs.
-
-   .. code-block:: bash
-      :caption: Enable SSL Dynamic Portal
-
-      firewall-cmd --permanent --zone=public --add-port=446/tcp
-      firewall-cmd --reload
-   
    The portal should now be reachable by going to https://your.server.com:446/valid8.php
+
+   Any IP address from the Dynamic Portal is handled through the **external** zone. By default all the services needed for ViciDial are already listed in this zone. Agent logins are remembered for 14 days. An agent who logs in to the portal gets through the firewall within a minute.
 
 Obscurity
 ---------
@@ -58,12 +44,13 @@ Obscurity
       * - /etc/apache2/listen.conf
         - Change all references of 446 to preferred port
 
-   Apache and firewalld will need to be restarted after making those changes. That can also be accomplished through a quick ``reboot``.
+   Apache will need to be restarted after making those changes, and the firewall told about the new port (in its saved configuration and the running one, see :ref:`firewall-zones`). That can also be accomplished through a quick ``reboot``. Under SELinux, Apache may only listen on ports labelled for web servers, so the new port must be labelled too (see :ref:`selinux`).
 
    .. code-block:: bash
       :caption: Restart apache and firewalld
 
-      service apache2 restart
+      semanage port -a -t http_port_t -p tcp <preferred-port>
+      systemctl restart apache2
       firewall-cmd --permanent --zone=public --add-port=<preferred-port>/tcp
-      firewall-cmd --reload
+      firewall-cmd --zone=public --add-port=<preferred-port>/tcp
    

@@ -2,13 +2,14 @@
 
 # -- Path setup --------------------------------------------------------------
 import datetime
+import os
 
 # -- Project information -----------------------------------------------------
 project = "ViciBox"
 copyright = "2005-%d, ViciDial Group" % datetime.datetime.now().year
 author = "James Pearson"
-release = "12.0"
-version = "12.0"
+release = "13.0.0-Beta3"
+version = "13.0"
 language = 'en'
 locale_dirs = ['locale/']
 gettext_compact = False
@@ -25,7 +26,12 @@ extensions = [
     "sphinx.ext.extlinks",
     "sphinx.ext.ifconfig",
     "sphinx.ext.viewcode",
+    "sphinx.ext.todo",
 ]
+
+# Screenshot placeholders and other drafting notes are written as ``.. todo::``. They only show in a local
+# draft build (VICIBOX_DRAFT=1, which preview.sh sets), never on Read the Docs.
+todo_include_todos = os.environ.get("VICIBOX_DRAFT") == "1"
 
 intersphinx_mapping = {
     "rtd": ("https://docs.readthedocs.io/en/stable/", None),
@@ -42,7 +48,10 @@ epub_show_urls = "footnote"
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
+# The cluster role pages are included into installation/phase2/cluster.rst, not pages of their own
+exclude_patterns = ["_build", "Thumbs.db", ".DS_Store",
+                    "installation/phase2/cluster-db.rst", "installation/phase2/cluster-web.rst",
+                    "installation/phase2/cluster-tel.rst"]
 
 # -- Options for HTML output -------------------------------------------------
 html_theme = "sphinx_rtd_theme"

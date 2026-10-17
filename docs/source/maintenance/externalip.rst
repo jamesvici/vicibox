@@ -1,27 +1,30 @@
+.. _external-ip:
 
 Change External IP
 ==================
 
-When the external IP is changed, a few settings need to be updated in ViciBox to match. To help facilitate this, the ``vicibox-externip`` script was added. This script will attempt to auto-detect the correct external IP and insert it into Asterisk. Alternatively, you can provide the new IP to the script when you run it.
+The external IP is the public internet address Asterisk puts in its SIP and SDP messages, so that phones and carriers outside the local network can reach it. It's set automatically when a telephony server is installed. When the external IP changes, for example after moving to a new ISP, it needs to be updated.
 
-Using vicibox-externip
-
+Using the Manager
+-----------------
 #. If not already, log in as the ``root`` user to get to the **#** command prompt.
-#. Type ``vicibox-externip`` and press ``ENTER``. Alternatively, type in the IP address to use as well, e.g. ``vicibox-externip 1.2.3.4``.
-#. Review the IP summary information, and press ``Y`` and press ``ENTER`` to make the change and update Asterisk.
+#. Type ``vicibox`` and press :kbd:`Enter` to start the :ref:`manager`.
+#. Select **External IP** and press :kbd:`Enter`. The screen shows the external IP Asterisk uses now and the one detected for this server.
+#. In **New external IP**, check the detected address or type in the IP address to use, I.E. ``203.0.113.5``.
+#. Leave **Reload Asterisk SIP settings now** ticked so the change takes effect straight away.
+
+   .. image:: /images/vicibox13/externalip.png
+      :alt: The External IP screen with the chan_sip and PJSIP addresses, the detected external IP and the new IP field
+      :width: 720
+
+#. Press **Apply** and confirm.
+
+This updates Asterisk's chan_sip and PJSIP configuration and the **External Server IP** of this server under :menuselection:`Admin --> Servers` in ViciDial.
 
 Additional Changes
+------------------
+In addition to the above, the following items will also need to be checked and possibly adjusted:
 
-In addition to modifying the Asterisk configuration, the following items will also need to be checked and possibly adjusted:
-
-- **External Server IP** under :menuselection:`Admin --> Servers`
 - DNS entries that pointed to the old server IP
 - **Sounds Web Server** under :menuselection:`Admin --> System Settings`
-
-Screenshots
------------
-
-Run vicibox-externip
-   .. image:: externalip-1.png
-      :alt: Run vicibox-externip
-      :width: 640
+- Carriers and remote phones that connect to the old IP

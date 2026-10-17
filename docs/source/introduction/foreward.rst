@@ -15,7 +15,7 @@ This documentation is designed to help those who are new or inexperienced with V
 
 For network experience, you will need a decent understanding of what a LAN/WAN is and how a basic NAT firewall works. If you have never done a port forward before, then it might be a good idea to find someone more experienced to help you. ViciDial is very sensitive to its networking environment, so it's important that it be properly implemented.
 
-You will be required to interact with the command line interface in order to install and set up ViciBox. While this can be done directly from the server itself, it's highly recommended to connect via SSH. You can use a stand-alone SSH client like `Putty <https://www.chiark.greenend.org.uk/~sgtatham/putty/>`_ or the built-in ``ssh`` command if your operating system supports it.
+Installing and setting up ViciBox is done from the command line, mostly through the :ref:`manager`. While this can be done directly from the server's console, it's highly recommended to connect via SSH: the manager uses colour and the mouse over SSH, while the server's own console is limited to 80x25 characters and eight colours. You can use a stand-alone SSH client like `Putty <https://www.chiark.greenend.org.uk/~sgtatham/putty/>`_ or the built-in ``ssh`` command if your operating system supports it.
 
 Reading Guide
 -------------
@@ -38,13 +38,19 @@ In order to remove as much ambiguity as possible, a certain syntax or style has 
      - at command prompt **#**
    * - type ``this``
      - Type everything in the block on the keyboard
-     - type ``yast lan`` and
-   * - press ``KEY``
+     - type ``vicibox`` and
+   * - press :kbd:`Key`
      - Press the corresponding key, do not type out K E Y
-     - press the ``ENTER`` key
-   * - press ``TAB``
+     - press :kbd:`Enter`
+   * - press :kbd:`Tab`
      - You may need to press the tab key multiple times
-     - press ``TAB`` to move
-   * - press ``KEY1``-``KEY2``
-     - Press KEY1 and KEY2 at the same time
-     - press ``ALT``-``O`` for OK
+     - press :kbd:`Tab` to move
+   * - press :kbd:`Key1+Key2`
+     - Press Key1 and Key2 at the same time
+     - press :kbd:`Ctrl+C` to stop
+   * - select **Item**
+     - In the :ref:`manager`, move to the item with the arrow keys or :kbd:`Tab` and press :kbd:`Enter` (or click it)
+     - select **Network setup**
+   * - tick **Option**
+     - Move to the checkbox and press :kbd:`Space` or :kbd:`Enter` so it shows an **X**
+     - tick **Web server**

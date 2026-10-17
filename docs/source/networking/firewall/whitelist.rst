@@ -1,58 +1,35 @@
-
-
 .. _white-list:
 
-ViciDial Whitelist
-==================
+ViciDial White List
+===================
 
-The ViciDial White List mode is designed to only allow known good IP addresses to connect to the server. This is accomplished by integrating with the ViciDial Remote Agent interface to dynamically allow connections from agents as they connect. This mode also allows for static entries to be added for things like SIP carriers and other trusted sources.
+The ViciDial White List mode is designed to only allow known good IP addresses to connect to the server. The addresses come from the **ViciWhite** IP list in ViciDial, so static entries for things like SIP carriers, offices and other trusted sources can be managed from the ViciDial admin interface. The White List can be combined with the :ref:`dynamic-portal`, which adds remote agents as they log in.
 
-Configuration Steps
--------------------
-
-#. If not already, log in as the ``root`` user to get to the **#** command prompt.
-#. Type ``vicibox-firewall`` and press ``ENTER``.
-#. Using the arrow keys, select **ViciDial White List** and press ``ENTER``.
-#. Type ``Y`` and press ``ENTER`` to confirm the change.
-#. Review the output to ensure the change was successful.
-
-Static Entries
---------------
-Static entries can be added to the white list by editing the ``/etc/firewalld/whitelist.conf`` file. Each entry should be on its own line and can be either an IP address or a network in CIDR notation.
-
-Example ``whitelist.conf``:
-
-* 192.168.1.0/24
-* 10.0.0.0/8
-* 1.2.3.4
+.. warning::
+   With the White List on, every address that is not on it, and not on a network in the **internal** or **trusted** zone, is locked out, including SSH. Add your own address to **ViciWhite** first.
 
 Setup
 -----
-The White List is only compatible with the Dynamic Portal. Below are the changes you would make to the ViciBox crontab entry. The recommendation is to delete the old entries and copy-paste these in. The crontab entries shown are for White List Only and White List with Dynamic Portal.
+#. In ViciDial, enable the IP List feature under :menuselection:`Admin --> System Settings`.
+#. Add the addresses that must always get in to the **ViciWhite** list under :menuselection:`Admin --> IP Lists` (see Control below).
+#. Log in as ``root``, type ``vicibox`` and press :kbd:`Enter` to start the :ref:`manager`.
+#. Select **Firewall** and press :kbd:`Enter`.
+#. Tick **Firewall on** and **ViciWhite list only**. Tick **Dynamic portal logins only** as well to also allow agents who log in through the portal. The block lists are turned off, since everything not on the list is blocked anyway.
 
-.. code-block:: none
-   :caption: White List only crontab
+   .. image:: /images/vicibox13/firewall-whitelist.png
+      :alt: The Firewall screen with the allow-only lists ticked, the block lists greyed out and the lockout warning
+      :width: 720
 
-   ### ViciBox integrated firewall, using whitelist only, and check once every minute
-   @reboot /usr/bin/VB-firewall --white --quiet
-   * * * * * /usr/bin/VB-firewall --white --quiet
+#. Press **Apply** and confirm.
+#. Remove every service from the **public** zone except **rtp** and **dhcpv6-client** (see :ref:`firewall-zones`), so that only White List addresses reach anything else.
 
-.. code-block:: none
-   :caption: White List with Dynamic Portal crontab
+Any IP address on the White List is handled through the **external** zone. By default, all the services needed for ViciDial are already listed in this zone.
 
-   ### ViciBox integrated firewall, using whitelist and dynamic portal, and check once every minute
-   @reboot /usr/bin/VB-firewall --white --dynamic --quiet
-   * * * * * /usr/bin/VB-firewall --white --dynamic --quiet
-
-The IP List feature must be enabled under :menuselection:`Admin --> Settings`.
-
-All services under the **Public** zone should be removed except **dhcpv6-client** and **rtp**.
-
-Any IP address on the White List will be handled through the **External** zone in ``yast firewall``. By default, all the services needed for ViciDial are already listed in this zone.
+To also allow the private address ranges (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) without listing them, add ``--addrfc1918`` to the ``VB-firewall`` lines in root's crontab (``crontab -e``).
 
 Control
 -------
-The White List can be controlled through the ``ViciWhite`` IP list. This can be found by going to :menuselection:`Admin --> IP Lists`. The format is simple, with one IP or CIDR network per line. Any changes made may take up to 2 minutes to apply.
+The White List is controlled through the **ViciWhite** IP list. This can be found by going to :menuselection:`Admin --> IP Lists`. The format is simple, with one IP or CIDR network per line. Changes are loaded the next time ``VB-firewall`` runs, within a minute; see :ref:`firewall`.
 
 .. code-block:: none
    :caption: Sample White List entries

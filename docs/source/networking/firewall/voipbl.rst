@@ -1,3 +1,4 @@
+.. _voip-bl:
 
 VoIP Black List
 ===============
@@ -6,23 +7,14 @@ This mode of operation downloads the `VoIP Black List <https://voipbl.org/>`_ an
 
 Default Operation
 -----------------
+The VoIP Black List is on by default on new telephony servers. It is reloaded at boot and every 6 hours.
 
-This mode of operation is the ViciBox default for new server installations. It is enabled through the root's crontab.
+To turn it on or off:
 
-.. code-block:: none
-   :caption: Default crontab entry
+#. Log in as ``root``, type ``vicibox`` and press :kbd:`Enter` to start the :ref:`manager`.
+#. Select **Firewall** and press :kbd:`Enter`.
+#. Tick or untick **VoIP Blacklist (voipbl.org)**.
+#. Press **Apply** and confirm.
 
-   ### ViciBox integrated firewall, by default just load the VoIP Black list and reload it every 4 hours
-   ### You can lock everyone out of your server if you set this wrong, so understand what you are doing!!!
-   @reboot /usr/bin/VB-firewall --voipbl --noblack --quiet
-   0 */6 * * * /usr/bin/VB-firewall --voipbl --noblack --quiet
-
-To disable the VoIP Black List, just comment out the last two lines above in the crontab.
-
-.. code-block:: none
-   :caption: Commented crontab entry
-
-   ### ViciBox integrated firewall, by default just load the VoIP Black list and reload it every 4 hours
-   ### You can lock everyone out of your server if you set this wrong, so understand what you are doing!!!
-   #@reboot /usr/bin/VB-firewall --voipbl --noblack --quiet
-   #0 */6 * * * /usr/bin/VB-firewall --voipbl --noblack --quiet
+.. note::
+   The list is large. Loading it takes a little while after boot, and firewalld can take noticeably longer to restart while it is loaded.

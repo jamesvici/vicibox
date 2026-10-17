@@ -20,13 +20,10 @@ The root user is everything in Linux. It's highly recommended to change the root
 Change Password Steps
 ---------------------
 #. If not already, login as the ``root`` user to get to the **#** command prompt
-#. Type ``passwd`` and press ``ENTER`` to change the root password
-#. At the **New password:** prompt type in your new root password and press ``ENTER``
-#. At the **Retype new password:** prompt type in the new root password again and press ``ENTER``
+#. Type ``passwd`` and press :kbd:`Enter` to change the root password
+#. At the **New password:** prompt type in your new root password and press :kbd:`Enter`
+#. At the **Retype new password:** prompt type in the new root password again and press :kbd:`Enter`
 
-Screenshots
------------
-Change root password
-   .. image:: change-rootpw-1.png
-      :alt: Run passwd to change root password
-      :width: 640
+.. image:: /images/vicibox13/change-rootpw.png
+   :alt: passwd asking for the new root password twice and reporting that it was updated
+   :width: 720

@@ -32,3 +32,7 @@ The standard ports for HTTP is TCP 80 and for HTTPS is TCP 443. The recommendati
 Web Sockets
 -----------
 The standard port for Web Sockets (WSS) is TCP 8089. This requires a valid SSL certificate that matches the server's FQDN. Please see the :ref:`ssl` section for more information on how to install an SSL certificate. This port is a control port, so some care should be taken to restrict who has access to it. While it does not currently have the same level of vulnerability as an exposed SIP port, it will eventually.
+
+Cockpit
+-------
+The Cockpit web console, if enabled, is on TCP port 9090. It gives full control over the server, so only open it to your own networks. ViciBox opens it only in the **internal** and **trusted** zones; see :ref:`cockpit`.
