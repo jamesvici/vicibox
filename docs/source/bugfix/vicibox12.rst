@@ -8,6 +8,7 @@ This section contains bugfixes, errata, and patch notes related to the ViciBox v
    :caption: 12.0 All Versions
 
    bugfix120-1
+   bugfix120-2
 
 .. toctree::
    :maxdepth: 1
