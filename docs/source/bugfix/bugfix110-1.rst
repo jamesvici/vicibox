@@ -14,13 +14,13 @@ Symptoms
 
 The Fix
 =======
-   The below commands refresh the repositories, switch the installed PHP 7 packages over to the fixed ones from the ViciBox repository, ``Leap-15.5-ViciBox``, and restart apache to load the new PHP. Only packages from the ViciBox repository are changed.
+   The below commands refresh the repositories, switch the installed PHP 7 packages over to the fixed ones from the ViciBox repository, ``openSUSE-Leap-15.5-ViciDial-ViciBox``, and restart apache to load the new PHP. Only packages from the ViciBox repository are changed.
 
    .. code-block:: bash
       :caption: Required fix and restart
 
       zypper ref
-      zypper dup --from Leap-15.5-ViciBox --allow-vendor-change
+      zypper dup --from openSUSE-Leap-15.5-ViciDial-ViciBox --allow-vendor-change
       systemctl restart apache2
 
    Afterwards ``php -v`` should show **PHP 7.4.34-dev**. In a cluster, do this on every server that has apache running including archive servers.
