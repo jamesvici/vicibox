@@ -12,6 +12,10 @@ ViciBox |release| Documentation
 
    **Security notice for ViciBox 12.0:** two critical PHP vulnerabilities (CVE-2026-109618 and CVE-2026-109619) allow unauthenticated remote code execution. Every ViciBox 12.0 server needs to be upgraded to PHP 8.2.35 or later. See `ViciBox 12.0 PHP remote code execution (php2shell) <https://docs.vicibox.com/en/12.0/bugfix/bugfix120-2.html>`__ for the fix.
 
+   **ViciBox 13.0 Beta 3 and earlier** need PHP 8.4.27 or later; Beta 4 already has it. See the `ViciBox v.13.0.0 Beta 4 announcement <https://vicibox.com/blog/vicibox-13-0-0-beta4/>`__ for the update steps.
+
+   **ViciBox 11.0:** an experimental fix is available, see `ViciBox 11.0 PHP remote code execution (php2shell) <https://docs.vicibox.com/en/11.0/bugfix/bugfix110-1.html>`__.
+
 ViciBox is the official installation image for the `ViciDial® Call Center Suite <https://www.vicidial.org/vicidial.php>`__.
 
 Official support is available through the `ViciDial Group <https://www.vicidial.com>`__.

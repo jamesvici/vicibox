@@ -21,8 +21,8 @@ Verifying the Download
 ----------------------
 Each ISO has an ``.md5`` file next to it with its checksum. Download both into the same folder and check the ISO before writing it to a USB flash drive or DVD; a damaged download can fail partway through the installation.
 
-* **Linux**: ``md5sum -c ViciBox_V13.x86_64-13.0.0-beta3.md5`` prints ``OK`` when the ISO matches.
-* **macOS**: ``md5 ViciBox_V13.x86_64-13.0.0-beta3.iso`` in the Terminal, then compare it to the checksum in the ``.md5`` file.
-* **Windows**: ``certutil -hashfile ViciBox_V13.x86_64-13.0.0-beta3.iso MD5`` in a Command Prompt, then compare it to the checksum in the ``.md5`` file.
+* **Linux**: ``md5sum -c ViciBox_V13.x86_64-13.0.0-beta4.md5`` prints ``OK`` when the ISO matches.
+* **macOS**: ``md5 ViciBox_V13.x86_64-13.0.0-beta4.iso`` in the Terminal, then compare it to the checksum in the ``.md5`` file.
+* **Windows**: ``certutil -hashfile ViciBox_V13.x86_64-13.0.0-beta4.iso MD5`` in a Command Prompt, then compare it to the checksum in the ``.md5`` file.
 
-Use the MD file names (``-md-beta3``) for the :ref:`media-md`. If the checksum doesn't match, download the ISO again.
+Use the MD file names (``-md-beta4``) for the :ref:`media-md`. If the checksum doesn't match, download the ISO again.

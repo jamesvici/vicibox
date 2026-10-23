@@ -48,7 +48,7 @@ Without installing anything, the same can be done in the Terminal with ``dd``. P
 .. code-block:: bash
 
    diskutil unmountDisk /dev/diskN
-   sudo dd if=ViciBox_V13.x86_64-13.0.0-beta3.iso of=/dev/rdiskN bs=4m
+   sudo dd if=ViciBox_V13.x86_64-13.0.0-beta4.iso of=/dev/rdiskN bs=4m
    diskutil eject /dev/diskN
 
 ``dd`` shows no progress on macOS; press :kbd:`Ctrl+T` to see how far it is.
@@ -71,11 +71,11 @@ Everyone else can use ``dd``, which every Linux distribution already has. All co
 
    .. code-block:: bash
 
-      dd if=ViciBox_V13.x86_64-13.0.0-beta3.iso of=/dev/sdX bs=4M status=progress oflag=direct conv=fsync
+      dd if=ViciBox_V13.x86_64-13.0.0-beta4.iso of=/dev/sdX bs=4M status=progress oflag=direct conv=fsync
 
 #. Wait for ``dd`` to return to the prompt. It prints how much was copied when it is done; the progress can pause near the end while the last of the data is written to the drive.
 #. Type ``sync`` and press :kbd:`Enter`, then remove the USB flash drive. It's now ready to install ViciBox.
 
-To check the copy, run ``cmp -n $(stat -c %s ViciBox_V13.x86_64-13.0.0-beta3.iso) ViciBox_V13.x86_64-13.0.0-beta3.iso /dev/sdX`` before removing the drive. It prints nothing if the flash drive matches the ISO.
+To check the copy, run ``cmp -n $(stat -c %s ViciBox_V13.x86_64-13.0.0-beta4.iso) ViciBox_V13.x86_64-13.0.0-beta4.iso /dev/sdX`` before removing the drive. It prints nothing if the flash drive matches the ISO.
 
 Graphical tools such as GNOME Disks (**Restore Disk Image**), KDE ISO Image Writer or balenaEtcher (see Mac above) do the same thing.
