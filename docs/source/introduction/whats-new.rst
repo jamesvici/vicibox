@@ -1,13 +1,24 @@
 .. _whats-new:
 
-What's New in 13.0
-==================
+What's New
+==========
 
+What's New in 13.1
+------------------
+ViciBox v.13.1.0 Beta 5 is the current test release. ViciBox has moved to openSUSE Leap 16.1, so v.13.1.0 replaces v.13.0.0, which will not be released as a final version. Servers installed from a ViciBox 13.0.0 Beta can be upgraded in place; see :ref:`upgrade-13-1`.
+
+* **openSUSE Leap 16.1** with kernel 6.12 replaces Leap 16.0.
+* **MariaDB 12.3** replaces MariaDB 11.8.
+* **PHP stays on 8.4**. Leap 16.1 moves to PHP 8.5, so ViciBox pins PHP 8.4 from its own repository. It starts at 8.4.27, which has the php2shell fix.
+* **Package repositories** now point at Leap 16.1, including the Asterisk, DAHDI and ViciBox packages.
+
+What's New in 13.0
+------------------
 ViciBox v.13.0 moves to openSUSE Leap 16.0. Leap 16.0 is a big change from the 15.x releases ViciBox 11 and 12 were built on, and ViciBox changed with it. If you have installed an earlier ViciBox, read this page first: several familiar commands are gone.
 
 YaST is gone: meet the ViciBox Manager
---------------------------------------
-openSUSE Leap 16.0 no longer ships YaST, so ``yast lan``, ``yast firewall`` and the other YaST modules are not available. In their place ViciBox |release| comes with the :ref:`manager`, a full-screen administration program you start by typing ``vicibox``. It shows the state of the server and the ViciDial cluster at a glance and runs every ViciBox task from one menu:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+openSUSE Leap 16.0 no longer ships YaST, so ``yast lan``, ``yast firewall`` and the other YaST modules are not available. In their place ViciBox comes with the :ref:`manager`, a full-screen administration program you start by typing ``vicibox``. It shows the state of the server and the ViciDial cluster at a glance and runs every ViciBox task from one menu:
 
 .. list-table:: Old commands and their replacement
    :widths: 40 60
@@ -45,11 +56,11 @@ New in the manager, with no equivalent before:
 The manager looks and works like the YaST text mode it replaces: the same colours, and the same function keys (:kbd:`F10` Next, :kbd:`F8` Back, :kbd:`F9` Abort).
 
 SELinux
--------
+~~~~~~~
 SELinux is enabled and enforcing by default on Leap 16.0, replacing AppArmor. ViciBox sets up the SELinux labels ViciDial needs, but anything you add by hand, such as files in a new directory served by Apache or a service on a non-standard port, may need a label too. See :ref:`selinux`.
 
 Other changes
--------------
+~~~~~~~~~~~~~
 * **NetworkManager** replaces wicked for network configuration.
 * **PJSIP** is the default SIP stack on new telephony servers. chan_sip is still available; see :ref:`sip-stack`.
 * **ConfBridge** replaces MeetMe as the conferencing engine on new telephony servers, using Asterisk's DAHDI timing. Restored servers keep the engine they had; it can be changed per server under :menuselection:`Admin --> Servers` (**Conferencing Engine**).

@@ -8,6 +8,7 @@ Common maintenance items on ViciBox. Most of them are actions in the :ref:`manag
    :titlesonly:
 
    maintenance/updates
+   maintenance/upgrade-13-1
    maintenance/backups
    maintenance/change-timezone
    maintenance/change-rootpw

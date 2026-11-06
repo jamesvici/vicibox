@@ -3,7 +3,7 @@
 ViciBox Manager
 ===============
 
-The ViciBox Manager is the administration program for ViciBox |release|. It replaces YaST, which openSUSE Leap 16.0 no longer includes, and the separate ``vicibox-*`` scripts of earlier ViciBox releases. Everything in this manual that changes the server, from setting a static IP to installing a ViciDial cluster, starts here.
+The ViciBox Manager is the administration program for ViciBox |release|. It replaces YaST, which openSUSE Leap 16 no longer includes, and the separate ``vicibox-*`` scripts of earlier ViciBox releases. Everything in this manual that changes the server, from setting a static IP to installing a ViciDial cluster, starts here.
 
 Starting the Manager
 --------------------

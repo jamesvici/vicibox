@@ -7,6 +7,9 @@ There are two kinds of updates on a ViciBox server: openSUSE package updates, wh
 
 System Updates
 --------------
+.. note::
+   A server installed from a ViciBox 13.0.0 Beta is still on Leap 16.0, and these updates won't move it to Leap 16.1. See :ref:`upgrade-13-1`.
+
 While not required, it is *highly* recommended to install updates. This will update the ViciBox manager and the other ViciBox packages as well as install bug fixes and security updates. Internet connectivity is required to install updates.
 
 #. If not already, log in as the ``root`` user to get to the **#** command prompt.

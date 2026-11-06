@@ -3,7 +3,7 @@
 SELinux
 =======
 
-openSUSE Leap 16.0 uses SELinux instead of AppArmor, and ViciBox |release| runs with SELinux **enforcing**. SELinux gives every file, port and process a label and only lets each program touch what its label allows. If Apache is ever compromised through a web page, it can't read the database files or Asterisk's configuration, even though it runs on the same server.
+openSUSE Leap 16 uses SELinux instead of AppArmor, and ViciBox |release| runs with SELinux **enforcing**. SELinux gives every file, port and process a label and only lets each program touch what its label allows. If Apache is ever compromised through a web page, it can't read the database files or Asterisk's configuration, even though it runs on the same server.
 
 ViciBox sets up the labels ViciDial needs, so a standard install works without any SELinux changes. You'll only run into SELinux when you add something by hand: a directory Apache must write to, Apache on another port, a database in a non-standard place. This page shows how to recognise an SELinux problem and fix it properly.
 
