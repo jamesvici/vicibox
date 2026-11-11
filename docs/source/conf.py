@@ -8,7 +8,7 @@ import os
 project = "ViciBox"
 copyright = "2005-%d, ViciDial Group" % datetime.datetime.now().year
 author = "James Pearson"
-release = "13.1.0-Beta5"
+release = "13.1.0-Beta6"
 version = "13.1"
 language = 'en'
 locale_dirs = ['locale/']

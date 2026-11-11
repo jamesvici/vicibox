@@ -5,12 +5,13 @@ What's New
 
 What's New in 13.1
 ------------------
-ViciBox v.13.1.0 Beta 5 is the current test release. ViciBox has moved to openSUSE Leap 16.1, so v.13.1.0 replaces v.13.0.0, which will not be released as a final version. Servers installed from a ViciBox 13.0.0 Beta can be upgraded in place; see :ref:`upgrade-13-1`.
+ViciBox v.13.1.0 Beta 6 is the current test release. ViciBox has moved to openSUSE Leap 16.1, so v.13.1.0 replaces v.13.0.0, which will not be released as a final version. Servers installed from a ViciBox 13.0.0 Beta can be upgraded in place; see :ref:`upgrade-13-1`.
 
 * **openSUSE Leap 16.1** with kernel 6.12 replaces Leap 16.0.
 * **MariaDB 12.3** replaces MariaDB 11.8.
 * **PHP stays on 8.4**. Leap 16.1 moves to PHP 8.5, so ViciBox pins PHP 8.4 from its own repository. It starts at 8.4.27, which has the php2shell fix.
 * **Package repositories** now point at Leap 16.1, including the Asterisk, DAHDI and ViciBox packages.
+* **SELinux Perl helper labels**: Perl scripts in the web root (such as ``sheet2tab.pl`` for spreadsheet lead loading and ``bp.pl`` for password hashing) are labeled ``bin_t`` so Apache can execute them under enforcing SELinux.
 
 What's New in 13.0
 ------------------

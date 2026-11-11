@@ -21,6 +21,8 @@ What ViciBox Configures
      - Why
    * - ``/srv/www/htdocs`` labelled ``httpd_sys_rw_content_t``
      - ViciDial's PHP writes logs, report images and the audio store under the web root
+   * - Perl helpers in ``/srv/www/htdocs/vicidial/`` and ``agc/`` labelled ``bin_t``
+     - VICIdial executes helpers like ``sheet2tab.pl`` (for .xlsx lead loading) and ``bp.pl`` (for password hashing)
    * - ``/srv/mysql`` labelled ``mysqld_db_t``
      - The MariaDB data directory on ViciBox
    * - TCP port 446 labelled ``http_port_t``
