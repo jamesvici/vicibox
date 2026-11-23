@@ -12,7 +12,7 @@ ViciBox |release| Documentation
 
    **Security notice for ViciBox 12.0:** two critical PHP vulnerabilities (CVE-2026-109618 and CVE-2026-109619) allow unauthenticated remote code execution. Every ViciBox 12.0 server needs to be upgraded to PHP 8.2.35 or later. See `ViciBox 12.0 PHP remote code execution (php2shell) <https://docs.vicibox.com/en/12.0/bugfix/bugfix120-2.html>`__ for the fix.
 
-   **ViciBox 13.0 Beta 3 and earlier** need PHP 8.4.27 or later; Beta 4 already has it. See the `ViciBox v.13.0.0 Beta 4 announcement <https://vicibox.com/blog/vicibox-13-0-0-beta4/>`__ for the update steps. ViciBox 13.1.0 includes the fix; see :ref:`upgrade-13-1`.
+   **ViciBox 13.0.0 builds before PHP 8.4.27** need it; later 13.0.0 builds already have it. See the `ViciBox v.13.0.0 PHP 8.4 update <https://vicibox.com/blog/vicibox-13-0-0-beta4/>`__ for the update steps. ViciBox 13.1.0 includes the fix; see :ref:`upgrade-13-1`.
 
    **ViciBox 11.0:** an experimental fix is available, see `ViciBox 11.0 PHP remote code execution (php2shell) <https://docs.vicibox.com/en/11.0/bugfix/bugfix110-1.html>`__.
 
@@ -26,7 +26,7 @@ ViciBox |release| is based upon the `openSUSE Leap 16.1 <https://www.opensuse.or
 
 Leap 16 no longer includes YaST, so ViciBox |release| comes with its own administration program, the :ref:`manager`. The :ref:`manager` is designed to be easy to use and simplify the most common configuration tasks.
 
-Coming from an earlier ViciBox? :ref:`whats-new` lists what changed. Servers installed from a ViciBox 13.0.0 Beta can be upgraded in place; see :ref:`upgrade-13-1`.
+Coming from an earlier ViciBox? :ref:`whats-new` lists what changed. Servers installed from a ViciBox 13.0.0 pre-release can be upgraded in place; see :ref:`upgrade-13-1`.
 
 .. _previous-manuals:
 

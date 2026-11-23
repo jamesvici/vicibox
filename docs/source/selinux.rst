@@ -25,6 +25,10 @@ What ViciBox Configures
      - VICIdial executes helpers like ``sheet2tab.pl`` (for .xlsx lead loading) and ``bp.pl`` (for password hashing)
    * - ``/srv/mysql`` labelled ``mysqld_db_t``
      - The MariaDB data directory on ViciBox
+   * - ``/var/spool/asterisk/monitorDONE`` labelled ``httpd_sys_content_t`` (and search ACL for ``wwwrun`` on ``/var/spool/asterisk``)
+     - Apache serves call recordings at ``/RECORDINGS/`` while voicemail and the rest of the Asterisk spool stay closed to Apache
+   * - ``/home/archive`` labelled ``public_content_rw_t`` with ``ftpd_anon_write`` on
+     - Archive server recordings written by vsftpd and served over HTTP by Apache
    * - TCP port 446 labelled ``http_port_t``
      - The HTTPS :ref:`dynamic-portal`
    * - ``httpd_can_network_connect`` on
@@ -58,7 +62,7 @@ SELinux Log in the Manager
 #. The list shows one line per kind of denial: how often it happened, when it first and last happened, and which program (and SELinux type) was refused what on which file, directory or port, and that object's SELinux type. A program that keeps retrying shows up once, with its count.
 
    .. image:: /images/vicibox13/selinux-log.png
-      :alt: The SELinux log with two kinds of denial: Apache refused reading the archive directory nine times, and a file once
+      :alt: The SELinux log with three kinds of denial: agetty at boot, Apache refused reading the archive directory 72 times, and a file once
       :width: 720
 
 #. To narrow it down, type in **Search**: a program, a file or directory name, a path or an SELinux type, I.E. ``httpd archive``. Every word must match, in any order and in upper or lower case.
@@ -143,6 +147,3 @@ To check whether SELinux is behind a problem at all, switch it to permissive mod
    setenforce 1     # enforcing again
 
 If the problem goes away in permissive mode, the denials logged meanwhile show what needs a label or a boolean. Fix that, then switch back to enforcing.
-
-.. todo::
-   Check that recordings play from the web interface: ``/RECORDINGS/`` is served by Apache from ``/var/spool/asterisk/monitorDONE``, which is labelled ``asterisk_spool_t``. If Apache is denied, ViciBox needs a rule for it and this page should list it under What ViciBox Configures.

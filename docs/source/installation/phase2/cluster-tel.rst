@@ -35,7 +35,7 @@ Follow these steps to install and configure the telephony server for a ViciDial 
 
    The Telephony server is now installed. If there are multiple telephony servers in the cluster, these instructions can be repeated on any additional servers. The first telephony server uploads its sound files to the audio store on the web server; the others download them from there. The G729 and G723 codecs are installed on every telephony server. A telephony server installed after the archive server uses it automatically; one installed before it is pointed at the archive with **Archive server** in the manager (see :ref:`archive-server`).
 
-   The main screen of a server with the telephony role, here an Express server, which has every role:
+   The main screen of a telephony server in a cluster:
 
    .. image:: /images/vicibox13/dashboard-dial1-main.png
       :alt: The main screen of a server with the telephony role, with its SIP stack and archive server in the ViciDial panel

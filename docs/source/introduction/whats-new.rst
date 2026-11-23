@@ -5,13 +5,14 @@ What's New
 
 What's New in 13.1
 ------------------
-ViciBox v.13.1.0 Beta 6 is the current test release. ViciBox has moved to openSUSE Leap 16.1, so v.13.1.0 replaces v.13.0.0, which will not be released as a final version. Servers installed from a ViciBox 13.0.0 Beta can be upgraded in place; see :ref:`upgrade-13-1`.
+ViciBox v.13.1.0 is the current release. ViciBox has moved to openSUSE Leap 16.1, so v.13.1.0 replaces v.13.0.0, which will not be released as a final version. Servers installed from a ViciBox 13.0.0 pre-release can be upgraded in place; see :ref:`upgrade-13-1`.
 
 * **openSUSE Leap 16.1** with kernel 6.12 replaces Leap 16.0.
 * **MariaDB 12.3** replaces MariaDB 11.8.
-* **PHP stays on 8.4**. Leap 16.1 moves to PHP 8.5, so ViciBox pins PHP 8.4 from its own repository. It starts at 8.4.27, which has the php2shell fix.
+* **PHP stays on 8.4**. Leap 16.1 moves to PHP 8.5, so ViciBox pins PHP 8.4 from its own repository. It ships 8.4.28, which has the php2shell fix.
 * **Package repositories** now point at Leap 16.1, including the Asterisk, DAHDI and ViciBox packages.
-* **SELinux Perl helper labels**: Perl scripts in the web root (such as ``sheet2tab.pl`` for spreadsheet lead loading and ``bp.pl`` for password hashing) are labeled ``bin_t`` so Apache can execute them under enforcing SELinux.
+* **SELinux Perl helper and recordings labels**: Perl scripts in the web root (such as ``sheet2tab.pl`` for spreadsheet lead loading and ``bp.pl`` for password hashing) are labeled ``bin_t`` so Apache can execute them under enforcing SELinux, and ``/var/spool/asterisk/monitorDONE`` is labeled ``httpd_sys_content_t`` (with search permission for ``wwwrun`` on ``/var/spool/asterisk``) so ``/RECORDINGS/`` opens from the web without exposing voicemail.
+* **Daily 1-day ``/tmp`` cleanup**: ``/etc/tmpfiles.d/fs-tmp.conf`` overrides openSUSE's 10-day retention to 1 day so the RAM-backed ``tmpfs`` ``/tmp`` does not fill up on long-running web and database servers.
 
 What's New in 13.0
 ------------------

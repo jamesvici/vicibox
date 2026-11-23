@@ -59,7 +59,7 @@ Installation Steps
 #. The first root login starts the **JeOS Firstboot** setup. Press :kbd:`Enter` on **Start**.
 
    .. image:: /images/vicibox13/jeos-start.png
-      :alt: JeOS Firstboot: Welcome to ViciBox v.13.0
+      :alt: JeOS Firstboot: Welcome to ViciBox v.13.1
       :width: 560
 
 #. Using the up and down arrow keys, select the system locale (language), I.E. ``en_US``, and press :kbd:`Enter`.
@@ -129,10 +129,10 @@ Installation Steps
       :width: 560
 
 #. The rest of the setup runs in a log window: updates, Cockpit, the RAID mirror, and preparing the server for ViciDial (database directory, firewall zones, PHP time zone and mail settings).
-#. When the log says **First boot setup finished**, press **Back to the menu**. The manager's main menu opens; quit it with :kbd:`q` or :kbd:`F9`. The mirror keeps copying in the background.
+#. When the setup is done, a **First boot setup finished** pop-up says so. Press :kbd:`Enter` on **Back to the menu**, or **View the log** (:kbd:`F9`) to read the log first. The manager's main menu opens; quit it with :kbd:`q` or :kbd:`F9`. The mirror keeps copying in the background.
 
    .. image:: /images/vicibox13/firstboot-console-log.png
-      :alt: First boot setup finished, with the second drive added to the mirror
+      :alt: The First boot setup finished pop-up, with the second drive added to the mirror
       :width: 560
 
 #. It is highly recommended to remove the installation media and reboot. To reboot, type ``reboot`` and press :kbd:`Enter`.

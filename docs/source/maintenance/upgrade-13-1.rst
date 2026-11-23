@@ -3,9 +3,9 @@
 Upgrading to ViciBox 13.1.0
 ===========================
 
-ViciBox 13.1.0 is based on openSUSE Leap 16.1. A server installed from a ViciBox 13.0.0 Beta runs on Leap 16.0 and can be upgraded in place, without reinstalling. Follow these steps on every server in the cluster.
+ViciBox 13.1.0 is based on openSUSE Leap 16.1. A server installed from a ViciBox 13.0.0 pre-release runs on Leap 16.0 and can be upgraded in place, without reinstalling. Follow these steps on every server in the cluster.
 
-A normal update with **System updates** in the :ref:`manager` does not do this, because the repositories on a 13.0.0 Beta server point at Leap 16.0.
+A normal update with **System updates** in the :ref:`manager` does not do this, because the repositories on a 13.0.0 pre-release server point at Leap 16.0.
 
 .. warning::
    This upgrades **MariaDB from 11.8 to 12.3**, and the database files are converted when MariaDB restarts. It can't be undone except by restoring from a backup, so make a full backup of the database first (see :ref:`backups`). Take a snapshot as well if the server is a virtual machine.
@@ -28,13 +28,13 @@ Upgrading a Server
 ------------------
 Log in as the ``root`` user and run these commands at the **#** command prompt.
 
-#. If you added the PHP repository from the Beta 4 announcement to a Beta 3 server, remove it. If ``zypper lr`` doesn't list it, skip this step.
+#. If you added the PHP 8.4 repository by hand on an earlier 13.0.0 server, remove it. If ``zypper lr`` doesn't list it, skip this step.
 
    .. code-block:: console
 
       zypper rr devel_languages_php_php84
 
-#. Point the ViciBox repositories at Leap 16.1. The PHP 8.4 repository that Beta 4 included is removed, because ViciBox 13.1.0 gets PHP 8.4 from the ViciBox repository. Giving that repository priority 90 keeps PHP on 8.4 rather than the newer version in Leap 16.1, which ViciBox 13.1.0 doesn't use.
+#. Point the ViciBox repositories at Leap 16.1. The PHP 8.4 repository that earlier 13.0.0 builds included is removed, because ViciBox 13.1.0 gets PHP 8.4 from the ViciBox repository. Giving that repository priority 90 keeps PHP on 8.4 rather than the newer version in Leap 16.1, which ViciBox 13.1.0 doesn't use.
 
    .. code-block:: console
 
@@ -84,7 +84,7 @@ After the reboot, log in as ``root`` and check that the server is on Leap 16.1 a
 
 * ``PRETTY_NAME`` shows **openSUSE Leap 16.1**.
 * The first line of ``/etc/vicibox-version`` shows **ViciBox v.13.1.0**.
-* PHP is **8.4.27** or later. It should not be 8.5.
+* PHP is **8.4.28** or later. It should not be 8.5.
 * MariaDB is **12.3**.
 * ``systemctl --failed`` lists no failed services.
 

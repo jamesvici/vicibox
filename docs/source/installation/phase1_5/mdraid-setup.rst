@@ -22,7 +22,7 @@ The Software RAID Screen
 The screen lists the arrays with the state of each drive in them, and every drive in the server: **member**, **free**, or in use by something else. While a mirror is copying, the progress is updated every few seconds. Below the list are the actions that apply right now.
 
 .. image:: /images/vicibox13/raid-copying.png
-   :alt: The Software RAID screen while the mirror copies (rebuilding 19%)
+   :alt: The Software RAID screen while the mirror copies (rebuilding 56%)
    :width: 720
 
 Once both drives are in sync, the server can run and boot from either one:
